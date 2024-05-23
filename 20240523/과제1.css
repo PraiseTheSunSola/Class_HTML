@@ -30,14 +30,13 @@
 
 #contents
 {
-
+    margin: 10px 0 10px 0;
 }
 
 .contents_box
 {
     width: 800px;
     height: 250px;
-    margin: 10px 0 10px 0;
     padding: 10px 20px 10px 20px;
     background-color: #F0D0B9;
     box-sizing: border-box;
