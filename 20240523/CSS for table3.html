@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>css로 테이블을 꾸며보자</title>
+
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+
+table{
+    border-collapse: collapse; /* 테이블 셀 간의 간격을 제거 */
+    width: 380px;
+}
+
+th, td{
+    border: 2px solid black;
+    text-align: center;
+}
+
+tr:hover{
+    background: #ccc;
+    color: red;
+    cursor: pointer;
+    font-family: "Nanum Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+.width_100{
+    width: 100px;
+}
+
+.width_80{
+    width: 80px;
+}
+
+tr{
+    height: 40px;
+}
+
+.bg_gold{
+    background-color: gold;
+}
+
+.bg_light_green{
+    background-color: lightgreen;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+</head>
+
+
+
+<body>
+
+    <table>
+  
+        <thead>
+            <tr>
+                <th id="developers" class="width_100 bg_gold">개발사</th>
+                <th class="width_100 bg_gold">게임</th>
+                <th class="width_100 bg_light_green">개발자</th>
+                <th class="width_80 bg_light_green">순위</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>프롬소프트</td>
+                <td>다크소울</td>
+                <td>히데타카</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>라운드8</td>
+                <td>p의 거짓</td>
+                <td>최지원</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>라리안</td>
+                <td>발더스3</td>
+                <td>스벤 빈케</td>
+                <td>3</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th class="bg_gold">개발사</th>
+                <th class="bg_gold">게임</th>
+                <th class="bg_light_green">개발자</th>
+                <th class="bg_light_green">순위</th>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
