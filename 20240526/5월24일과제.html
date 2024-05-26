@@ -16,12 +16,250 @@
 
         #web
         {
-        
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            
         }
 
-        .left_hamberger
+        .left_side_background
         {
-            background-image: url();
+            position: fixed;
+            width: 10px;
+            height: 100%;
+            background-color: #F1B434;
+        }
+
+        .left_hamburger
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            margin-top: 70px;
+            margin-left: 30px;
+            background-image: url(lefthamburger.png);
+            background-repeat: no-repeat;
+            /* background-size: cover; */
+            display: inline-block;
+        }
+
+        .car_list
+        {
+            width: 80px;
+            margin-top: 30px;
+            margin-left: 250px;
+            display: inline-block;
+        }
+
+        .car_img
+        {
+            width: 80px;
+            height: 100px;
+            margin-bottom: 15px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+        }
+
+        .img1
+        {
+            background-image: url(main-2-172x216-crop-q72.jpg);
+        }
+
+        .img2
+        {
+            background-image: url(lorenzoangelone-82338-a-front-shot-from-a-light-blue-porsche-96-547afe1c-5a63-4ad2-a1fa-561f4c4559f3-172x216-crop-q72.jpg);
+        }
+
+        .img3
+        {
+            background-image: url(4-3lamborghini-countach-lp5000-1-172x216-crop-q72.jpg);
+        }
+
+        .img4
+        {
+            background-image: url(987-bmw-m3-front-main-172x216-crop-q72.jpg);
+        }
+
+        .img5
+        {
+            background-image: url(mercedes-g-wagon-lp5000-2-172x216-crop-q72.jpg);
+        }
+
+        .img6
+        {
+            background-image: url(11-172x216-crop-q72.jpg);
+        }
+
+        .img7
+        {
+            background-image: url(main-172x216-crop-q72.jpg);
+        }
+
+        .img8
+        {
+            background-image: url(update-main-172x216-crop-q72.jpg);
+        }
+
+        .main_text
+        {
+            position: absolute;
+            top: 0%;
+            left: 38%;
+            display: inline-block;
+            width: 500px;
+        }
+
+        .car1
+        {
+            position: relative;
+            width: 100%;
+        }
+
+        .car1_img
+        {
+            margin-bottom: 30px;
+            height: 100px;
+            background-image: url(987-bmw-m3-front-main-864x1080-crop-q72.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+        }
+        
+        .car1> .car1_name, .car1_price
+        {
+            display: inline-block;
+        }
+
+        .car1_name
+        {
+            font-weight: 550;
+        }
+
+        .car1_price
+        {
+            position: absolute;
+            right: 0;
+            font-weight: 550;
+            color: #F1B434;
+        }
+
+        .car1_spec> p
+        {
+            display: inline-block;
+            border: 1px solid #ECEDEE;
+            padding: 5px;
+            font-size: 13px;
+            
+        }
+
+        .car1_spec
+        {
+            margin: 10px 0 30px 0;
+        }
+
+        .car2
+        {
+            position: relative;
+            width: 100%;
+        }
+
+        .car2_img
+        {
+            margin-bottom: 30px;
+            height: 600px;
+            background-image: url(mercedes-g-wagon-lp5000-2-864x1080-crop-q72.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+            
+        }
+        
+        .car2> .car2_name, .car2_price
+        {
+            display: inline-block;
+        }
+
+        .car2_name
+        {
+            font-weight: 550;
+        }
+
+        .car2_price
+        {
+            position: absolute;
+            right: 0;
+            font-weight: 550;
+        }
+
+        .car2_spec> p
+        {
+            display: inline-block;
+            display: inline-block;
+            border: 1px solid #ECEDEE;
+            padding: 5px;
+            font-size: 13px;
+            
+        }
+        .car2_spec
+        {
+            margin: 10px 0 30px 0;
+        }
+
+        .right_hamburger
+        {
+            width: 100px;
+            height: 50px;
+            padding: 10px;
+            position: absolute;
+            top: 70px;
+            right: 30px;
+            border: 1px solid gray;
+            text-align: center; 
+        }
+
+        .right_hamburger_img
+        {
+            display: inline-block;
+            width: 30px;
+            height: 20px;
+            background-image: url(righthamburger.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .menu_name
+        {
+            display: inline-block;
+            
+        }
+
+        .category
+        {
+            position: absolute;
+            right: 30px;
+            bottom: 70px;
+            text-align: center;
+        }
+
+        .sold
+        {
+            display: inline-block;
+            width: 70px;
+            height: 50px;
+            padding: 10px;
+            border: 1px solid gray;
+        }
+
+        .available
+        {
+            display: inline-block;
+            width: 100px;
+            height: 50px;
+            padding: 10px;
+            background-color: #F1B434;
+            border: 1px solid black;
+            font-weight: 550;
         }
     </style>
 </head>
@@ -30,17 +268,18 @@
 <body>
     
     <div id="web">
+        <div class="left_side_background"></div>
         <div class="left_hamburger"></div>
 
         <div class="car_list">
-            <div class="car_img"></div>
-            <div class="car_img"></div>
-            <div class="car_img"></div>
-            <div class="car_img"></div>
-            <div class="car_img"></div>
-            <div class="car_img"></div>
-            <div class="car_img"></div>
-            <div class="car_img"></div>
+            <div class="car_img img1"></div>
+            <div class="car_img img2"></div>
+            <div class="car_img img3"></div>
+            <div class="car_img img4"></div>
+            <div class="car_img img5"></div>
+            <div class="car_img img6"></div>
+            <div class="car_img img7"></div>
+            <div class="car_img img8"></div>
         </div>
 
         <div class="main_text">
@@ -50,10 +289,7 @@
                 <p class="car1_name">BMW M3 E30</p>
                 <p class="car1_price">Sold</p>
                 <div class="car1_spec">
-                    <p>2001</p>
-                    <p>113.000 km</p>
-                    <p>Manual</p>
-                    <p>343pk</p>
+                    <p>2001</p><p>113.000 km</p><p>Manual</p><p>343pk</p>
                 </div>
             </div>
 
@@ -62,10 +298,7 @@
                 <p class="car2_name">Mercedes G - Wagon</p>
                 <p class="car2_price">€ 58.000</p>
                 <div class="car2_spec">
-                    <p>2017</p>
-                    <p>22.546km</p>
-                    <p>automatic</p>
-                    <p>500pk</p>
+                    <p>2017</p><p>22.546km</p><p>automatic</p><p>500pk</p>
                 </div>
             </div>
 
