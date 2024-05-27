@@ -1,0 +1,256 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* border와 padding 포함*/
+}
+
+ul
+{
+    list-style-type: none;
+}
+
+#wrap
+{
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#header
+{
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+#top
+{
+    background: #3b414d;
+    color: #eee;
+    width: 100%;
+    /* height는 따로 지정하지 않고 자식 태그들의 의해 결정하게 한다. */
+}
+
+.top_text_box
+{
+    text-align: right;
+    padding-right: 50px;
+}
+
+#top .top_text
+{
+    display: inline-block;
+    padding: 8px 15px;
+}
+
+#top .top_text:nth-child(2)
+{
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+#nav 
+{
+    width: 100%;
+    position: relative;
+    height: 106px;
+
+}
+
+#logo_box
+{
+    padding: 8px 0;
+    float: left;
+}
+
+#logo_box img
+{
+    width: 90px;
+}
+
+#menu_box
+{
+    position: relative;
+}
+
+#menu_list
+{
+    position: absolute;
+    right: 0;
+    height: 106px;
+}
+
+#menu_list .menu
+{
+    float: left;
+    position: relative;
+    top: 30px;
+    font-size: 25px;
+    padding: 0 15px;
+}
+
+#menu_list .menu:hover
+{
+    cursor: pointer;
+    color: brown;
+    font-weight: 800;
+    /* text-shadow: 3px 3px #444; */
+    text-shadow: 3px 3px lightcoral;
+}
+
+#main
+{
+    width: 100%;
+
+}
+
+#slide
+{
+    position: relative;
+    width: 100%;
+}
+
+#slide .slide_image
+{
+    /* background: url(../image/slide.jpeg) no-repeat center; 라고 한 줄로 적어도 적용됨*/
+    background: url(../image/slide.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+
+}
+
+.move
+{
+    /* position: relative;
+    bottom: 175px; */
+    /* width: 100%;
+    font-size: 25px; */
+}
+
+.move_bt
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #eee;
+    padding: 1px 5px 5px 5px;
+    font-size: 25px;
+    opacity: 0.7;
+    cursor: pointer;
+}
+.move .left
+{
+    /* position: absolute; */
+    left: 10px;
+    /* padding-left: 10px; */
+
+}
+.move .left_arrow
+{
+    /* background-color: antiquewhite; */
+}
+
+
+.move .right
+{
+    /* position: absolute; */
+    right: 10px;
+    /* padding-right: 10px; */
+    
+}
+
+.move .right_arrow
+{
+    /* background-color: antiquewhite; */
+}
+
+#content
+{
+    width: 100%;
+    height: 280px;
+    padding: 20px;
+}
+
+.left_content
+{
+    float: left;
+    width: 50%;
+}
+
+.left_content .notice .title
+{
+    line-height: 40px;
+}
+
+.right_content
+{
+    width: 50%;
+    padding: 10px;
+    float: left;
+}
+
+.event_top
+{
+    background: url(../image/event1.jpeg) no-repeat center;
+    background-size: cover;
+    height: 105px;
+    border-radius: 10px;
+    box-shadow: inset 3px 3px 5px #666;
+}
+
+.event_bottom
+{
+    background: url(../image/event2.jpeg) no-repeat center;
+    background-size: cover;
+    height: 105px;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 5px 7px #666;
+}
+
+#footer
+{
+    position: relative;
+    width: 100%;
+    height: 123px;
+    padding: 10px;
+    background: #3b414d;
+    /* 선생님이 하신 코딩  */
+    /* padding: 20px;
+    color: #eee; */
+    /* 선생님이 하신 코딩  */
+}
+
+.foot_menu
+{
+    height: 21px;
+/* 선생님이 하신 코딩  */
+    /* height: 30px; */
+    /* 선생님이 하신 코딩  */
+    font-size: 12px;
+}
+
+.foot_menu li
+{
+    
+    float:left;
+}
+
+.foot_text
+{
+    position: absolute;
+    top: 40px;
+    
+        /* 선생님이 하신 코딩  */
+    /* color:#bbb;
+    font-weight: 800; */
+        /* 선생님이 하신 코딩  */
+}
+
+.foot_text>p
+{
+    line-height: 30px;
+}
