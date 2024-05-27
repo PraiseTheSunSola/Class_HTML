@@ -1,0 +1,152 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#web_site
+{
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    top: 40px;
+}
+
+.header
+{
+    margin-bottom: 20px;
+}
+
+.side_menu
+{
+    position: fixed;
+    top: 30%;
+    left: 100px;
+}
+
+.side_menu_box
+{
+    padding: 10px;
+    background: lightblue;
+    color: white;
+    border-radius: 10px;
+}
+
+.menu_text
+{
+    line-height: 2;
+}
+
+.main
+{
+    width: 100%;
+}
+
+.slide_image
+{
+    background: url(../image/main.jpg) no-repeat center;
+    background-size: cover;
+    height: 450px;
+}
+
+.slide_btn
+{
+    width: 100%;
+}
+
+.slide_btn_box
+{
+    padding: 5px ;
+}
+
+.btn_box
+{
+    height: 30px;
+}
+
+.btns
+{
+    width: 50px;
+    height: 20px;
+    float: left;
+    border-radius: 10px;
+}
+
+.btn1
+{
+    background-color: lightblue;
+}
+
+.btn2
+{
+    margin: 0 5px;
+    background-color: aqua;
+}
+
+.btn3
+{
+    background-color: aquamarine;
+}
+
+.contents_text
+{
+    width: 100%;
+}
+
+.contents_text_box
+{
+
+}
+
+.text
+{
+    font-size: 20px;
+    line-height: 2;
+}
+
+.footer
+{
+    width: 100%;
+}
+
+.footer_image_box
+{
+    position: relative;
+    padding: 20px;
+    
+}
+
+.image_box
+{
+    width: 680px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.image
+{
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+
+.image1
+{
+    background: url(../image/sub1.jpg) no-repeat center;
+    background-size: contain;
+}
+
+.image2
+{
+    background: url(../image/sub2.jpg) no-repeat center;
+    background-size: contain;
+    margin: 0 40px;
+    
+}
+
+.image3
+{
+    background: url(../image/sub3.jpg) no-repeat center;
+    background-size: contain;
+}
