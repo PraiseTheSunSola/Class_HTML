@@ -18,24 +18,40 @@
     margin-bottom: 20px;
 }
 
+.title> h2:hover
+{
+cursor: pointer;
+color: green;
+}
 .side_menu
 {
     position: fixed;
     top: 30%;
     left: 100px;
+    
 }
 
+.menu
+{
+    list-style: none;
+}
 .side_menu_box
 {
     padding: 10px;
     background: lightblue;
-    color: white;
+    color: black;
+    border: 2px solid black;
     border-radius: 10px;
 }
 
 .menu_text
 {
     line-height: 2;
+}
+.menu_text:hover
+{
+    cursor: pointer;
+    font-weight: 700;
 }
 
 .main
@@ -48,6 +64,11 @@
     background: url(../image/main.jpg) no-repeat center;
     background-size: cover;
     height: 450px;
+}
+
+.slide_image:hover
+{
+    cursor: pointer;
 }
 
 .slide_btn
@@ -73,6 +94,11 @@
     border-radius: 10px;
 }
 
+.btns:hover
+{
+    cursor: pointer;
+    border: 2px solid black;
+}
 .btn1
 {
     background-color: lightblue;
@@ -112,6 +138,8 @@
 
 .footer_image_box
 {
+    width: 100%;
+    height: 250px;
     position: relative;
     padding: 20px;
     
@@ -119,28 +147,35 @@
 
 .image_box
 {
-    width: 680px;
+    position: absolute;
+    left: 10%;
     height: 200px;
-    margin: 0 auto;
 }
 
 .image
 {
-    width: 200px;
+    width: 250px;
     height: 200px;
     float: left;
 }
 
+.image:hover
+{
+    cursor: pointer;
+    scale: 1.2;
+    border: 4px solid black;
+    border-radius: 5px;
+}
 .image1
 {
     background: url(../image/sub1.jpg) no-repeat center;
-    background-size: contain;
+    background-size: cover;
 }
 
 .image2
 {
     background: url(../image/sub2.jpg) no-repeat center;
-    background-size: contain;
+    background-size: cover;
     margin: 0 40px;
     
 }
@@ -148,5 +183,5 @@
 .image3
 {
     background: url(../image/sub3.jpg) no-repeat center;
-    background-size: contain;
+    background-size: cover;
 }
