@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플렉스 연습</title>
+
+    <style type="text/css">
+
+        #wrap
+        {
+            height: 500px;
+            border: 2px solid black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center; /*높이가 없다면 끝까지 길어진다.*/
+            flex-direction: column;
+        }
+
+        .item
+        {
+            align-self: stretch;
+            /* width: 30%; */
+            height: 30px;
+            
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="item yellow"  style="background: yellow">aaaaaaaaaaaaaaaaaaaaaaaa</div>
+        <div class="item red"    style="background: red">b</div>
+        <div class="item blue"   style="background: blue">c</div>
+        <div class="item green" style="background: green">d</div>
+        <div class="item violet" style="background: violet">e</div>
+    </div>
+</body>
+</html>
