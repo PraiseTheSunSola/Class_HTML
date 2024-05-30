@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플렉스 연습 세번째</title>
+</head>
+
+<body>
+
+    <style>
+        #card_wrap
+        {
+            display: flex;
+            flex-wrap: wrap;
+            width: 400px;
+            box-sizing: border-box;
+            row-gap: 9px;
+        }
+
+        .card
+        {
+            width: 33.33%;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+
+        .card:nth-child(1), .card:nth-child(4)
+        {
+            padding-right: 6px;
+            
+        }
+
+        .card:nth-child(2), .card:nth-child(5)
+        {
+            padding-right: 3px;
+            padding-left: 3px;
+        }
+        .card:nth-child(3), .card:nth-child(6)
+        {
+            padding-left: 6px;
+        }
+        .card>.card_img
+        {
+            width: 100%;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .card .card_img img
+        {
+            display: block;
+            width: 100%;
+        }
+
+        .card_text
+        {
+            margin: 0;
+            padding-top: 5px;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            height: 42px; /*두줄로 나오게 하기 위해서 글자의 높이를 대강 층적후 두줄이면 이런 높이지 않을까 해서 나온  수치*/
+            text-overflow: ellipsis; 
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+        }
+    </style>
+    <div id="card_wrap">
+        <div class="card">
+            <div class="card_img">
+                <img src="https://loremflickr.com/100/130?random=1" alt="">
+            </div>
+            <p class="card_text">html 구조의 시작 헤더</p>
+        </div>
+        <div class="card">
+            <div class="card_img">
+                <img src="https://loremflickr.com/100/130?random=2" alt="">
+            </div>
+            <p class="card_text">html 구조의 시작 헤더dddddddddd</p>
+        </div>
+        <div class="card">
+            <div class="card_img">
+                <img src="https://loremflickr.com/100/130?random=3" alt="">
+            </div>
+            <p class="card_text">html 구조의 시작 헤더</p>
+        </div>
+        <div class="card">
+            <div class="card_img">
+                <img src="https://loremflickr.com/100/130?random=4" alt="">
+            </div>
+            <p class="card_text">html 구조의 시작 헤더</p>
+        </div>
+        <div class="card">
+            <div class="card_img">
+                <img src="https://loremflickr.com/100/130?random=5" alt="">
+            </div>
+            <p class="card_text">html 구조의 시작 헤더</p>
+        </div>
+        <div class="card">
+            <div class="card_img">
+                <img src="https://loremflickr.com/100/130?random=6" alt="">
+            </div>
+            <p class="card_text">html 구조의 시작 헤더</p>
+        </div>
+    </div>
+</body>
+</html>

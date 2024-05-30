@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플렉스 연습</title>
+</head>
+
+
+<body>
+    <style>
+        #container1
+        {
+            display: flex;
+            gap: 20px;
+        }
+        .item1
+        {
+            padding: 0 10px;
+            cursor: pointer;
+        }
+        #container2
+        {
+            display: flex;
+            width: 500px;
+        }
+        .item2
+        {
+            flex-grow: 1;
+            text-align: center;
+        }
+        #container3
+        {
+            display: flex;
+            padding: 20px 0;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            width: 800px;
+            /* align-items: center; */
+        }
+        .logo1>img
+        {
+            width: 50px;
+            display: block;
+        }
+        #container3> ul
+        {
+            display: flex;
+            flex-grow: 1;
+            align-items: center;
+            justify-content: space-evenly;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+
+        }
+        #container3 > ul > li
+        {
+
+        }
+    </style>
+    <h2>메뉴 만들기</h2>
+    <div id="container1">
+        <div class="item1">쇼핑</div>
+        <div class="item1">증권</div>
+        <div class="item1">뉴스</div>
+        <div class="item1">웹툰</div>
+        <div class="item1">스포츠</div>
+    </div>
+    <div id="container2">
+        <span class="item2">쇼핑</span>
+        <span class="item2">증권</span>
+        <span class="item2">뉴스</span>
+        <span class="item2">웹툰</span>
+        <span class="item2">스포츠</span>
+    </div>
+    <div id="container3">
+        <div class="logo1"><img src="https://loremflickr.com/200/200"></div>
+        <ul>
+            <li class="item3">게임</li>
+            <li class="item3">영화</li>
+            <li class="item3">웹툰</li>
+            <li class="item3">물놀이</li>
+            <li class="item3">바캉스</li>
+        </ul>
+    </div>
+
+    <style>
+        #header
+        {
+            margin: 0 auto;
+            width: 1000px;
+            height: 55px;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            
+        }
+        #left
+        {
+            display: flex;
+        }
+        .left_menu
+        {
+            line-height: 55px;
+            padding: 0 15px;
+            font-weight: 800;
+        }
+        #left .left_menu:hover
+        {
+            background: #00dc64;
+            color: white;
+        }
+
+        #right
+        {
+
+        }
+        #right #creator_bt
+        {
+            background: #00dc64;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+
+        }
+    </style>
+
+    <h2> 메뉴 만들기 실습</h2>
+    <div id="header">
+        <div id="left">
+                <div class="left_menu sub1">홈</div>
+                <div class="left_menu sub2">웹툰</div>
+                <div class="left_menu sub3">베스트도전</div>
+                <div class="left_menu sub4">도전만화</div>
+                <div class="left_menu sub5">마이페이지</div>
+        </div>
+        <div id="right">
+            <button id="creator_bt">CREATOR'S</button>
+        </div>
+    </div>
+
+</body>
+</html>
