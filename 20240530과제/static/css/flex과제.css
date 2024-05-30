@@ -1,0 +1,22 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container
+{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1000px;
+    padding: 20px;
+    margin: 0 auto;
+    border: 2px solid goldenrod;
+}
+
+#imag_box
+{
+    width: calc((1000px - 80px) / 3);
+
+}
