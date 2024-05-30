@@ -9,28 +9,29 @@
 {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
     width: 1000px;
     height: 800px;
-    padding: 20px;
-    margin: 10px auto;
+    padding: 20px 0;
+    margin: 20px auto;
     border: 2px solid goldenrod;
 }
 
-#container #image_box
+.image_box
 {
+
     width: calc((1000px - 80px) / 3);
+    
 }
 
 img
 {
     display: block;
-    width: 100%;
+}
+
+.image_box .image
+{
     height: calc((800px - 80px) / 3);
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-#container #image_box .image
-{
-
 }
