@@ -79,9 +79,36 @@
         // console.log(RedCup);
 
         // 데이터 입력 방법 1.
+        // prompt로 입력한 데이터는 문자열이다.
+        // 숫자로 계산하려면 숫자로 강제 변환을 해야한다.
+        // 숫자로 변환이 가능한 문자열만 할 수 있다.
+        // parseInt (문자열) -> 정수로 변환
+        // parseFloat( 문자열) -> 실수로  변환
+        // Number(문자열) -> 숫자로 변환, 문자열에 단 하나의 문자도 있으면 안된다.
+        // kor = parseInt(prompt("국어점수"));
+        // mat = parseInt(prompt("수학점수"));
+        // eng = parseInt(prompt("영어점수"));
+        // total = kor + mat + eng;
 
-        input = prompt();
-        document.write(input);
+        // document.write("<br> 국어 : "+ kor +" 수학 : "+ mat + " 영어 : "+eng);
+        // document.write("<br> 총점 : "+ parseInt(total));
+        
+        // document.write("<hr>");
+        // 실습 3.
+        // 이름과 거주 도시명 , 생년월일을 입력하여 출력하세요.
+
+        name = prompt("성함은 무엇입니까?");
+        residence = prompt( "거주중인 도시 명칭은 무엇입니까?");
+        date_Of_Birth = prompt("생년월일은 어떻게 되십니까?");
+        document.write( "이름은 "+name +"이고, 거주중인 도시 이름은 "+ residence+ "이며, 생년월일은 " + date_Of_Birth+"입니다.");
+
+
+        // 주말 동안 과제 
+        // 1. 원의 반지름 입력받아 넓이와 둘레 구하기
+        // 원의 둘레 = 반지름 * 2 * 3.14
+        // 원의 넓이 = 반지름 * 반지름 * 3.14
+        // 2. 태어난 년도입력받아  현재 나이 구하기
+        //  몇 년도에 태어났는데 그거랑 현재 나이 구하기 
 
     </script>
 </head>
