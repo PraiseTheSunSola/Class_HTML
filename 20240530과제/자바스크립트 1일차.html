@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 1일차</title>
+
+    <script type="text/javascript">
+
+        num=10;
+
+        apple= 1203;
+        melon= 234;
+        garpe= 1203;
+        melon= "나는 멜론"
+
+        document.write(num,garpe,melon,apple);
+        document.write(num);
+        document.write(num);
+        document.write(num);
+        num = 100;
+        document.write('<br>');
+        document.write('<br>1000*13');
+        document.write("Praise The Sun!");
+
+        width=45;
+        height=30;
+        
+        document.write("<br>");
+        document.write("사각형의 너비는?");
+        document.write(width);
+        document.write("높이는" + height);
+        document.write('<br>');
+        document.write("높이는" + width*height);
+
+
+        // 문제 아래에 //로 표기된 문장들을 브라우저에 띄어라 계산까지 해서.
+        // 국어 : 89, 영어 : 94 , 수학 : 78
+        // 총점 : 261점
+        kor=89;
+        eng=94;
+        mat=78;
+
+        document.write("<br>");
+        document.write("국어 : " + kor + ", "+ "영어 : " + eng + ", " + "수학 : "+ mat);
+        document.write("<br>");
+        document.write("총점 : " + (kor + eng + mat) + "점");
+
+        // total = kor+mat+eng;
+        // document.write("총점 :" + total+ "점");
+
+        document.write("<hr>");
+        document.write('<br>');
+
+        // 커피 총 주문 금액과 수박주스 총 주문 금액 출력
+        // 음료 총 주문 금액 출력
+        커피주문 = 3;
+        아메리카노 = 1500;
+        coffee_total = 아메리카노*커피주문;
+        수박주스주문 = 4;
+        수박주스 = 2000;
+        watermelon_total = 수박주스*수박주스주문;
+        drink_total = coffee_total+watermelon_total;
+
+        document.write("주문하신 커피의 총 주문 금액은 "+ coffee_total + "원이고, " + "주문하신 수박주스의 총 주문 금액은 " + watermelon_total + "원입니다.");
+        document.write('<br>');
+        document.write("주문하신 음료의 총 주문 금액은 " + drink_total + "원입니다. 이용해주셔서 감사합니다.");
+
+        document.write("<hr>");
+
+        
+            // 변수의 이해
+        RedCup = 10;
+        BlueCup = 20;
+        WhiteCup = 0;
+        WhiteCup = RedCup; //화이트는 10
+        RedCup = BlueCup;  // 레드는 20
+        BlueCup = WhiteCup; // 블루는 10
+        // console.log(RedCup);
+
+        // 데이터 입력 방법 1.
+
+        input = prompt();
+        document.write(input);
+
+    </script>
+</head>
+
+
+
+<body>
+
+
+</body>
+</html>
