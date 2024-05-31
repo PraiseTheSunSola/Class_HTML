@@ -8,7 +8,6 @@
 #container
 {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-evenly;
     width: 1000px;
     height: 800px;
@@ -17,10 +16,16 @@
     border: 2px solid goldenrod;
 }
 
-.image_box
+#container .image_box
 {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc((1000px - 84px) / 3);
+    height: calc((800px - 84px) / 3);
+}
 
-    width: calc((1000px - 80px) / 3);
+#container> .box1
+{
     
 }
 
@@ -31,7 +36,7 @@ img
 
 .image_box .image
 {
-    height: calc((800px - 80px) / 3);
+    width: calc((1000px - 84px) / 3);
     background-repeat: no-repeat;
     background-size: cover;
 }
