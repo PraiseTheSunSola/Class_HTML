@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바 스크립트 2일차</title>
+
+    <script>
+        refuelCar = Number(prompt("주유 휘발유량 : "));
+        // prompt로 입력받은 값을 Number 함수를 통해 숫자로 변환
+        // 숫자로 변환해서 refuelCar 변수에 저장
+        gasolineCost = 1636; // 휘발유 리터당 금액
+
+        gasPrice = gasolineCost * refuelCar;
+        // 총 주유 금액은 리터당 휘발유 * 주유 휘발유량;
+
+        document.write("상품명 : 휘발유<br>");
+        document.write("판매량 : " + refuelCar + "<br>");
+        document.write("단가 : " + gasolineCost + "<br>");
+        document.write("지불금액 : " + gasPrice + "<br>");
+        document.write("<hr>");
+        document.write("<br>");
+        
+        // 문제 1.
+        // 삼각형의 넓이를 구하세요. (밑변 * 높이 / 2)
+        // 밑변과 높이를 prompt를 통해 입력받으세요. 
+        base = Number(prompt("삼각형의 밑변을 입력하세요."));
+        height = Number(prompt("삼각형의 높이를 입력하세요."));
+        area = Math.floor(base*height/2); //Math.floor(숫자) -> 정수만 추출
+        document.write("이 삼각형의 넓이는 " + area + " 입니다.");
+        
+        // Math.round( 숫자) → 소수점 이하를 반올림
+        // 숫자가 저장된 변수 num = 20.345;
+        // 20.345 -> 20.3
+        // 소수점 몇자리까지 표현
+        // num.toFixed(1); -> 20.3
+        // 변수명.toFixed( 소수점 자릿수 ); -> toFixed의 결과값은 문자열이다.
+        // parseFloat(변수명.toFixed(소수점 자릿수 )); -> 실수라는 숫자로 사용가능
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+    
+
+
+
+</body>
+</html>
