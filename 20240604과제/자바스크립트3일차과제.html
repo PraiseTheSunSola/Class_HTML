@@ -12,15 +12,10 @@
         1.   세 개의 정수 를 입력받아서 가장 큰 수 를 출력하세요.
             단, 같은숫자 입력 은 하지말고요
 
-        2. 주사위 게임 컴퓨터와 함께
-            - 컴퓨터와 내가 각각 주사위 2개씩 던진다. 
-            -  주사위의 합이 큰쪽이 이긴다. 
-            - 단,  주사위가 같은 값이면 이긴다.
-            예)   컴 :  1 ,5     나 : 2,3    -> 나의 패배 (합이 작으니까)
-            컴 : 5, 6     나: 1, 1   -> 나의 승리 (같은 값이 나왔으니까)
+
     */
 
-    // 문제 1번 
+    //문제 1번 
     num1 = Number(prompt("첫 번째 정수를 입력하시오"));
     num2 = Number(prompt("두 번째 정수를 입력하시오"));
     num3 = Number(prompt("세 번째 정수를 입력하시오"));
@@ -49,6 +44,48 @@
     }
 
     
+
+    /*
+            2. 주사위 게임 컴퓨터와 함께
+            - 컴퓨터와 내가 각각 주사위 2개씩 던진다. 
+            -  주사위의 합이 큰쪽이 이긴다. 
+            - 단,  주사위가 같은 값이면 이긴다.
+            예)   컴 :  1 ,5     나 : 2,3    -> 나의 패배 (합이 작으니까)
+            컴 : 5, 6     나: 1, 1   -> 나의 승리 (같은 값이 나왔으니까)
+
+    */        
+
+
+
+    // 문제 2번
+
+    dice1 = Math.floor(Math.random()*6)+1;
+    dice2 = Math.floor(Math.random()*6)+1;
+    user = dice1 + dice2;
+
+    // console.log(dice1 && dice2);
+
+    dice3 = Math.floor(Math.random()*6)+1;
+    dice4 = Math.floor(Math.random()*6)+1;
+    com = dice3 + dice4;
+
+    // console.log(com);dice1 == dice2
+
+    if(dice1 == dice2){
+
+        alert("내 주사위 눈은 "+ dice1 + " , " + dice2 + " 컴퓨터 주사위 눈은 " + dice3 + " , " + dice4 + " 나의 승리! 그러니까 태양만세!");
+
+    } else if (user > com){
+
+        alert("내 주사위 눈은 "+ dice1 + " , " + dice2 + " 컴퓨터 주사위 눈은 " + dice3 + " , " + dice4 + " 나의 승리! 그러니까 태양만세!");
+
+    } else if(user < com){
+        
+        
+        alert("내 주사위 눈은 "+ dice1 + " , " + dice2 + " 컴퓨터 주사위 눈은 " + dice3 + " , " + dice4 +" 나의 패배... 그러니까 기계만세!");
+
+    }
+
     </script>
 </head>
 
