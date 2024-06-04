@@ -34,11 +34,22 @@
 
     total_Day_Lost = Math.floor(total_Hours_Lost / 24); // 총 몇 일 (하루에 24시간)
 
+    document.write(`과제 1. <br>`)
     document.write(`이 사람의 수명 중 <br> 단축된 몇 분은 ${total_Minutes_Lost}분입니다. 적당히 드세요. <br>`);
     document.write(`단축된 몇 시간은 ${total_Hours_Lost}시간입니다. 적당히 드세요.<br>`);
-    document.write(`단축된 몇 일은 ${total_Day_Lost}일입니다. 적당히 드세요.`);
+    document.write(`단축된 몇 일은 ${total_Day_Lost}일입니다. 적당히 드세요. <br> <hr>`);
+
+    
     // 과제 2
     /* 두개의 주사위를 던져서 같은 값이 나온다면 당첨, 아니라면 꽝 출력 (1~6 육면 주사위) */
+
+    dice1 = Math.floor(Math.random()*6)+1;
+    dice2 = Math.floor(Math.random()*6)+1;
+    console.log(dice1)
+    tumble = (dice1 == dice2)? "당첨" : "꽝";
+    document.write(`과제 2. <br>`)
+    document.write(tumble);
+
     </script>
 </head>
 <body>

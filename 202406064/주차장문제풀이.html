@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제 풀이</title>
+
+    <script>
+        
+        
+        // cpt - customerParkingTime 고객 주차시간
+        cost = 1000;
+        parkingTime = 3; // 30으로 하면 계산이 복잡해진다.
+        add = 100;
+
+        cpt = Number(prompt("총 주차시간 몇 분")); 
+
+        cost = (cpt >= 240) ? 2700 : (cpt >= 120) ? 1700 : cost;
+        // cost = (cpt >= 240) ? 2700 : cost;
+
+        parkingTime = (cpt >= 240)? 24 : (cpt >= 120) ? 12 : parkingTime;
+
+        time = Math.floor(cpt/10);
+        price = (time <= parkingTime) ? cost : cost + (time - parkingTime) + add;
+
+        document.write(`주차시간 : ${cpt}분 , 주차장 : ${price.toLocaleString()}원 <br>`);
+        //.toLocaleString()는 숫자 단위에 콤마 찍는것 
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

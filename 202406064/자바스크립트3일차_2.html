@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 3일차</title>
+    <script>
+
+        // 자바스크립트 조건문 - 조건에 따라 코드를 실행 시키는 제어문이다.
+        // 조건문 if ~ else , switch문
+        // if문: 조건식이 참이냐 거짓이냐에따라 코드를 실행
+        // switch: 선택문 입력한 값에 맞는 코드를 선택하여 실행
+
+        // if문 기본 구조
+        // if(조건식) {참일경우 실행할 내용}
+
+        // if(조건식) {참일경우 실행할 내용}
+        // else{ 거짓일경우 실행할 내용}
+
+        // if(조건식) {참내용}
+        // else { if(조건식){참 내용} else {거짓 내용} }
+
+        //if(조건식) {참 내용}
+        // else if (조건식) {참 내용}
+        //  else {거짓 내용}
+
+
+        // if(10>5) { // 조건식이 참일경우에 중괄호가 실행된다.
+        //     alert(" 5보다 크다");
+        //     alert("두 번째 코드");
+        //     alert("세 번째 코드");
+        // }
+
+        // addr = "대전광역시";
+
+        // if (addr ==="대전광역시"){
+        //     document.write("구를 선택하세요.");
+        //     document.write("대덕구, 동구, 중구, 서구, 유성구");
+        // } else { // 조건식이 거짓일 경우에만 실행.
+        //     document.write("올바르지 않은 지역 선택입니다.");
+        //     document.write("다시 선택하세요. ");
+        // }
+
+        // 바이킹 키가 140이상 탑승 가능
+
+        // tall = 143;
+        
+        // if (tall >= 140) {
+        //     document.write("바이킹 탑승 가능");
+        // } else {
+        //     document.write("바이킹 탑승 불가");
+        // }
+
+        // if문 작성할때 참과 거짓에 실행할 코드가 하나라면 중고라호 생략가능
+        // 실행할 코드가 2개 이상이라면 반드시 중괄호로 묶어야 한다.
+        // result = (tall >= 140)? "탑승가능" : "탑승 불가";
+        //  document.write(result);
+
+        
+        // 요금 = 0; // 변수의 초기화
+        // result = ""; // 변수의 초기화
+        // // 변수는 코드의 상단에 모두 초기화 생성하여 사용하는게 좋다.
+        // tall = 125;
+
+        // if (tall >= 140){
+        //     result = '탑승가능';
+        //     요금 = 1200;
+
+        // } else {
+        //     result = '탑승불가';
+        // } 
+        // document.write(result + " , " + 요금);
+        // // 참과 거짓의 영역이 다르기 때문에 같은 이름의 변수여도 별개 취급을 해야한다.
+
+        // document.write( result + " , " + 요금);
+
+        // document.write('<hr');
+
+        // 문제 1.두 정수를 입력받아서 두 정수 중 작은수 출력
+        
+
+        // integer_1 = Number(prompt("첫 번째 정수를 입력하시오"));
+        // integer_2 = Number(prompt("두 번째 정수를 입력하시오"));
+
+        // if(integer_1 < integer_2) {
+        //     document.write("작은수 : " + integer_1);
+        // } else {
+        //     document.write("작은수 : " + integer_2);
+        // }
+
+        //  문제 2.두정수가 같은 숫자라면 같다라고 출력
+
+        // integer_1 = Number(prompt("첫 번째 정수를 입력하시오"));
+        // integer_2 = Number(prompt("두 번째 정수를 입력하시오"));
+
+        // if(integer_1 < integer_2) {
+        //     document.write("작은수 : " + integer_1);
+        // } else {
+        //     if (integer_1 == integer_2)
+        //     document.write("같다");
+        //  else 
+        //     document.write("작은수 : " + integer_2);
+        // }
+
+        //else는 필요한 경우에만 만들자.
+
+        // document.write('<hr>');
+
+        // coin = Math.floor(Math.random() * 2 );
+        // console.log(coin);
+
+        // user = Number( prompt("1.앞면 2.뒷면  동전 앞면 뒷면 선택하세요."));
+        
+        // if( coin === user ) {
+        //     document.write(" 정답 ! ");
+        // } else {
+        //     document.write(" 땡! ");
+        // }
+
+        // 주사위 1개를 던진다. 주사위의 값이 4 또는 6이 나오면 10000원을 받을수 있다.
+
+        // document.write('<hr>');
+
+        // dice = Math.floor(Math.random() * 6) + 1;
+
+        // if( dice == 4 || dice == 6 ) {
+        //     document.write("10000원 받았다."); // "10,000원 받았다. ("+ dice+")");
+        // } else {
+        //     document.write(" 땡! ");
+        // }
+
+        // document.write('<hr>');
+
+        // 문제. 
+        // 가위바위보 컴퓨터랑 대결하기
+        // 가위 - 1, 바위 - 2, 보 - 3
+        // 컴퓨터는 랜덤값 , 나는 직접 입력 (prompt)
+        // 내가 승, 패, 비김 (나와 컴퓨터의 값이 같으면)
+
+        // scissors = 1;
+        // rock = 2;
+        // paper = 3;
+        com = Math.floor(Math.random() * 3 ) +1;
+        console.log(com);
+        me = Number(prompt("안 내면 1차 사기 가위 바위 보!"));
+        if(me > com){
+            alert("기계쉑 수준...");
+        } else if(me <com){
+            alert("인간 수준...");
+        } else {
+            alert("무효야! 다시해!");
+        }
+
+        // console.log(me > com);
+        // console.log(me < com);
+        // console.log(me < scissors_rock_paper);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
