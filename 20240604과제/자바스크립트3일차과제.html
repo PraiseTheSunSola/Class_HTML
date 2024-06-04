@@ -6,10 +6,54 @@
     <title>3일차 과제</title>
 
     <script>
+    
+    /*
 
+        1.   세 개의 정수 를 입력받아서 가장 큰 수 를 출력하세요.
+            단, 같은숫자 입력 은 하지말고요
+
+        2. 주사위 게임 컴퓨터와 함께
+            - 컴퓨터와 내가 각각 주사위 2개씩 던진다. 
+            -  주사위의 합이 큰쪽이 이긴다. 
+            - 단,  주사위가 같은 값이면 이긴다.
+            예)   컴 :  1 ,5     나 : 2,3    -> 나의 패배 (합이 작으니까)
+            컴 : 5, 6     나: 1, 1   -> 나의 승리 (같은 값이 나왔으니까)
+    */
+
+    // 문제 1번 
+    num1 = Number(prompt("첫 번째 정수를 입력하시오"));
+    num2 = Number(prompt("두 번째 정수를 입력하시오"));
+    num3 = Number(prompt("세 번째 정수를 입력하시오"));
+
+    if((num1 < num2) && (num2 < num3)) {
+
+        // console.log((num1 < num2) && (num2 < num3));
+        // console.log("가장 큰 수는 num3의 " + num3);
+        document.write("가장 큰 수는 num3의 " + num3 + "입니다.")
+
+    } else if ((num1 < num2) && (num2 > num3)) { 
         
+        // console.log((num1 < num2) && (num2 > num3));
+        // console.log("가장 큰 수는 num2의 " + num2);
+        document.write("가장 큰 수는 num2의 " + num2 + "입니다.")
+    
+    }  else if((num1 > num2) && (num3 < num1)){
+        
+        // console.log("가장 큰 수는 num1의 " + num1);
+        document.write("가장 큰 수는 num1의 " + num1 + "입니다.")
+    
+    } else if((num1 = num2) || (num2 = num3) || (num3 = num1)) {
+
+        // console.log("같다");
+        document.write("두 개 이상 중복되는 수가 입력되었습니다. 다시 입력하시길 바랍니다.")
+    }
+
+    
     </script>
 </head>
+
+
+
 <body>
     
 </body>
