@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 4일차</title>
+
+    <script>
+
+        // 변수의 범위(scope)
+        /* let, var, const
+
+        let a = 10; (o) let a = 330; (x)
+        변수의 데이터 변경 가능, 변수를 재생성은 안됨.
+        let - {} 안에 변수 생성 (지역변수), 전역변수, 배열 생성시, 객체생성시 
+
+        var b = 10; b= 332; b = 23213; var b = 32; 모두 (o)
+        변수의 데이터 변경 가능, 변수 재생성도 가능.
+        var - {} 안에 변수 생성(지역변수)
+
+        const c = 30; c = 45; (x) const c = 63; (x)
+        변수의 데이터 변경 불가능, 변수 재생성도 불가능
+        => 심볼릭 상수! or 상수 = 데이터 읽기 권한만 있는 메모리 공간.
+        const - 고유값, 변경 되면 안되는 값, 불변 데이터를 이름으로 표현 하고자할 때
+        const pi = 3.14;  or 소프트웨어 개발시 다른 사람에게 변경하지말라, 건들지 말라고 
+        알려주기 위한 용도.
+
+        */
+        //변수 생성, 변수 할당 이라고 한다.
+        let count = 0; // 변수의 초기화 - 변수를 생성 또는 할당 하면서 데이터를 저장하는 행위.
+
+        function up () {
+
+            if( count < 20){
+            count++; // ++에 의해서 20 +1이 되버리니 
+            };
+            console.log(count);
+            // document - html 문서 (dom)
+            // .getElement - html 안에서 태그를 가져와라.
+            // getElementById - html 태그의 id로 찾아라.
+            // getElementByClassName - html 태그의 class로 찾아라.
+
+            let divBox = document.getElementById("box");
+            divBox.innerText = count;
+            
+        };
+
+        // 증가되는 최대값은 20 이고, 감소되는 최솟값은 -10이다.
+        // 최대와 최소에 도달하면 더이상 증감 되지 않게 하시오.
+
+        function down() {
+            if(count < -10){
+            count--;
+            };
+            console.log(count);
+            let divBox = document.getElementById("box");
+            divBox.innerText = count;
+        };
+
+
+    </script>
+</head>
+<body>
+    <!-- onclick은 마우스로 html태그를 클릭할 때의 동작을 처리하기 위한 이벤트다.
+         태그를 클릭하면 onclick="함수명()" 의 함수명 이라는 이름을 자바스크립트에서 
+         찾아서 실행 시킨다.
+         클릭하면 어떤 기능 또는 동작을 하고 싶은지 자바스크립트로 작성해야 한다.
+
+         up() -> up이라는 이름의 함수를 실행해라 라는 뜻. up 함수 호출.
+        -->
+
+    <button onclick="up()">증가</button>
+    <button onclick="down()">감소</button>
+
+    <div id= "box" style="font-size: 40px;"></div>
+</body>
+</html>

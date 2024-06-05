@@ -22,25 +22,26 @@
 
     if((num1 < num2) && (num2 < num3)) {
 
-        // console.log((num1 < num2) && (num2 < num3));
+        console.log((num1 < num2) && (num2 < num3));
         // console.log("가장 큰 수는 num3의 " + num3);
         document.write("가장 큰 수는 num3의 " + num3 + "입니다.")
 
     } else if ((num1 < num2) && (num2 > num3)) { 
         
-        // console.log((num1 < num2) && (num2 > num3));
+        console.log((num1 < num2) && (num2 > num3));
         // console.log("가장 큰 수는 num2의 " + num2);
         document.write("가장 큰 수는 num2의 " + num2 + "입니다.")
     
     }  else if((num1 > num2) && (num3 < num1)){
         
-        // console.log("가장 큰 수는 num1의 " + num1);
+        console.log((num1 > num2) && (num3 < num1));
         document.write("가장 큰 수는 num1의 " + num1 + "입니다.")
     
     } else if((num1 = num2) || (num2 = num3) || (num3 = num1)) {
 
-        // console.log("같다");
+        console.log((num1 = num2) || (num2 = num3) || (num3 = num1)); 
         document.write("두 개 이상 중복되는 수가 입력되었습니다. 다시 입력하시길 바랍니다.")
+        // 이 조건식 또한 참이 되야 작동하는 전제이기 때문에 참이고 숫자 1은 true와 같다.
     }
 
     
@@ -71,7 +72,7 @@
 
     // console.log(com);dice1 == dice2
 
-    if(dice1 == dice2){
+    if(user === com){
 
         alert("내 주사위 눈은 "+ dice1 + " , " + dice2 + " 컴퓨터 주사위 눈은 " + dice3 + " , " + dice4 + " 나의 승리! 그러니까 태양만세!");
 
@@ -85,6 +86,10 @@
         alert("내 주사위 눈은 "+ dice1 + " , " + dice2 + " 컴퓨터 주사위 눈은 " + dice3 + " , " + dice4 +" 나의 패배... 그러니까 기계만세!");
 
     }
+    
+
+    /* "내 주사위 눈은 "+ dice1 + " , " + dice2 + " 컴퓨터 주사위 눈은 " + dice3 + " , " + dice4 +" 나의 패배... 그러니까 기계만세!" 
+    라는 긴 내용을 변수에 저장후 가정문에 입력하면 식이 더 간결해짐 */
 
     </script>
 </head>

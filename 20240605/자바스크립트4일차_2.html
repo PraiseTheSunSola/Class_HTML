@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 4일차 -2</title>
+
+    <script>
+        /*
+        switch문 - 여러개의 선택지 중 하나를 선택하여 동작.
+        switch ~ case문 - case로 선택지를 만들어서 동작할 수 있게 한다.
+        선택된 case의 내용이 실행되고 switch문의 } 를
+        만날때까지 실행을 멈추지 않는다.
+        {} 중괄호의 의미는 코드의 {여기가 시작,  } 여기가 끝!
+        break는 제어문의 실행을 중단 시키는 기능을 가지고 있다.
+        break는 if문에 단독으로 사용 하면 안된다.
+        */
+
+        // const num = 10;
+
+        // switch( 10 ){
+        //     case num:
+        //         document.write("5를 선택했네");
+        //         break;
+        //     case 8: case 10:
+        //           document.write("10을 선택했네");
+        //           break;
+        //     case 100: // 이것 또한 상수 100이나 8 
+        //           break;
+        // }
+        // case 뒤에 붙일수 있는 데이터는 정수, 실수 , 문자열 모두 가능.
+
+
+        // menu = prompt("실행 할 메뉴를 입력하세요. (복사 -c, 붙여넣기 -v, 잘라내기 -x)");
+
+        // switch(menu) {
+        //     case "c" :
+        //     document.write("복사했습니다.");
+        //     break;
+
+        //     case "v":
+        //     document.write("붙여넣기 했습니다.");
+        //     break;
+
+        //     case "x":
+        //     document.write("잘라내기 했습니다.");
+        //     break;
+        // }
+
+
+        /*반복문 - 중복되는 코드. 카운트가 필요한 코드, 반복적으로 동작해야하는 경우에 반복문을 사용한다.
+          반복문은 초기값, 조건식, 증감식을 갖춘다. 시작값과 종료값
+
+          //for문 , while문 , do~while은 좀 다름
+        */
+
+        // while(조건식){
+
+        //     증감식;
+        // }
+
+        // 반복문은 조건식이 참인 동안에만 실행 된다. 조건식이 거짓이면 반복문은 종료.
+        // 10번 반복
+        // var i= 1; // 초기값 , 시작값 보통 0 아니면 1로 시작함.
+
+        // while(i <= 5) { // 조건식
+            
+        //     document.write( i + "번. div 출력 <br>");
+        //     i ++; // 증감식 
+        // }
+
+        // 초기값 -> 조건식 비교 -> while문의 {} 실행    
+        // -> 증감식 -> 조견식비교 -> 참 +> while 문의 {} 실행.
+        // -> 증감식 -> 조견식비교 -> 참 +> while 문의 {} 실행.
+        // -> 증감식 -> 조견식비교 -> 참 +> while 문의 {} 실행.
+        // -> 증감식 -> 조견식비교 -> 참 +> while 문의 {} 실행.
+        // -> 증감식 -> 조건식비교 _거친- 초
+
+        // document.write("1번. div 출력 <br>");
+        // document.write("2번. div 출력 <br>");
+        // document.write("3번. div 출력 <br>");
+        // document.write("4번. div 출력 <br>");
+        // document.write("5번. div 출력 <br>");
+
+        // 게임을 12판 한다면 아래 while문을 어떻게 만들어야 하는가?
+
+        // var i = 1; 
+        // while(i <= 12) {
+        //     document.write("게임이 시작 되어습니다. <br>");
+        //     // 게임 진행을 위한 코드
+        //     document.write("게임이 끝났습니다.");
+        //     i++;
+        // }
+
+        // 9번을 반복하는 반복문 만들기.
+        // 디버깅 - 개발한 코드의 오류를 찾아 수정하기 위한 방법.
+        // 디버깅 방법 - 디버깅 도구를 활용.
+
+        // let i = 1;
+
+        // while(i <= 9) {
+        //     document.write("<br>2 *  " +i+ " =  "  + (i*2));
+        //     i++; // 위에 말고 밑에 두기.
+        // }
+
+        // 100번을 반복하면서 1부터 100까지 화면에 출력하세요.
+
+        // let i = 1;
+
+        // while(i <= 100) {
+        //     document.write(i + " " + " ");
+        //     i++;
+        // }
+
+
+        // 1부터 10까지 숫자 중에서 2의 배수만 출력해라.
+        // let i = 2;
+        // while(i <= 10) {
+        //     document.write("<br>" + i);
+        //     i = i+2; // 증감식 
+        // }
+
+        // 또 다른 방법은
+        // let i = 1;
+        // while(i <= 10) {
+        //     if(i % 2 == 0) {  // 2 대신 3을 넣으면 3의 배수 
+        //         document.write("<br>" + i);
+        //     }
+        //     i++;
+        // }
+
+        // 1 ~ 100 중에 6의 배수만 나오게 하려면,  
+        // let i = 1;
+        // while(i <= 100) {
+        //     if(i % 6 == 0) {  // 2 대신 3을 넣으면 3의 배수 
+        //         document.write("<br>" + i);
+        //     }
+        //     i++;
+        // }
+
+        // 반복문이 끝나려면 조건식이 거짓이거나 break를 사용하거나.
+
+        // 1 ~ 9 중의 숫자를 입력 받아서 입력한 숫자에 맞는 구구단을 출력하세요.
+
+        // let i = 1;
+        // while(i <= 9) {
+        //     document.write(i*1 + " " +i*2 + " " + i*3 + " " + i*4 + " " + i*5 + " " + i*6 + " " + i*7 + " " + i*8 + " " + i*9 + "<br>");
+        //     i++;
+        // };
+
+        // num = Number(prompt("구구단 몇 단?"));
+
+        // let i = 1;
+        // while( i <= 9) {
+        //     document.write(`<br> ${num} * ${i} = ${num*i}`);
+        //     i++;
+        // }
+
+        /* 동전 앞면 뒷면 맞추기 !
+           1.앞면 , 2. 뒷면 
+           동전 앞면 뒷면 맞추기를 10판 할 수 있게 만드세요.
+        */
+
+        
+        // let i = 1;
+        //  while(i <= 10) {
+        //     let coin = Math.floor(Math.random()*2)+1;
+        //     const user = Number(prompt("동전 앞면 뒷면 맞추기 1. 앞면 / 2. 뒷면 당신의 선택은?"));
+        //     if(user == coin) {
+        //         document.write(`유저의 값이 ${user} 이므로 성공 <br>`);
+        //     } else {
+        //         document.write(`유저의 값이 ${user} 이므로 실패  <br>`);
+        //     }
+        //     i++;
+        // }
+
+        // 컴퓨터가 가지고 있는 숫자를 맞춰라!!
+        // 컴퓨터에게 1 ~50 중 하나를 랜덤값으로 줄 것이다.
+        // 맞출때까지 계속 입력 한다.
+        // 입력값을 컴퓨터 숫자와 비교하여 업 , 다운을 화면에 표시.
+        // 
+
+        // let com = Math.floor(Math.random()*50)+1; // 최초에 나온 랜덤 수가 고정되어야 그걸 토대로 업 다운한다.
+        // let i = 1;
+
+        // while(i <= 10) {
+        //     user = Number(prompt("up & down 숫자 맞추기 : "));
+        //     if(user == com){
+        //         document.write("<br> 정답!");
+        //         break;  // 반복문에 적용되는 브레이크 참이 나왔으니 반복을 끝내라! 야메로! 
+        //     } else if ( user > com) { // 컴퓨터의 숫자보다 크게 입력한 경우
+        //         alert("DOWN!");
+        //     } else if ( user < com ) { // 컴퓨터의 숫자보다 작게 입력한 경우
+        //         alert("UP!");
+        //     }
+        //     i++;
+        // }
+
+        /*
+        for문 - 반복 횟수가 정해져 있는 경우에 사용.
+        while문 - 반복 횟수가 정해져 있지 않은 경우에 사용.
+        */
+
+        let com = Math.floor(Math.random()*50)+1; // 최초에 나온 랜덤 수가 고정되어야 그걸 토대로 업 다운한다.
+        let i = 1;
+
+        // 무한으로 반복문을 돌리려면 이렇게 변경해야한다.
+
+        while( true ) {
+            user = Number(prompt("up & down 숫자 맞추기 : "));
+            if(user == com){
+                document.write("<br> 정답!");
+                break;  // 반복문에 적용되는 브레이크 참이 나왔으니 반복을 끝내라! 야메로! 
+            } else if ( user > com) { // 컴퓨터의 숫자보다 크게 입력한 경우
+                alert("DOWN!");
+            } else if ( user < com ) { // 컴퓨터의 숫자보다 작게 입력한 경우
+                alert("UP!");
+            }
+            
+        }
+
+        /* 오늘의 과제는 컴퓨터 입장에서 내 숫자를 맞추게 하기.
+        
+        1 ~ 50 중에 하나를 내가 입력한다.
+
+        내가 입력한 숫자를 컴퓨터가 random() 함수를 통해 맞춰야 한다.
+        UP, DOWN
+        */
+        // 힌트
+        /*  컴퓨터의 랜덤값을 바꿔야함. 범위도 곱하기를 쓰냐 더하기를 쓰냐 그때 그때 다름
+            내가 초기값을 프롬프트로 입력했을때 결과값은 쭈르르를 한번에 나오기
+        */
+    </script>
+</head>
+<body>
+
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+</html>
