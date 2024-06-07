@@ -14,10 +14,44 @@
             
         */
 
-        
+        let user = 0;
+
+        while( !(1 <= user && user <= 50 )) {
+            user = Number(prompt("1~50 중 하나 입력하세요. "));
+
+
+        }
+
+        let max = 50;
+        let min = 1;
+        let mul = 50;
+
+        /* Math.floor(Math.random()*50)+1  
+        1~50까지 나오게 해야하니 +1은 시작인 최솟값이고
+        * 50은 최대값인 50을 의미한다. 
+        */
+
+        while (true) {
+            com = Math.floor(Math.random() * mul ) + min; // * 50 ) +1 - 1~50 
+
+            if( user === com ) {com = Math.floor(Math.random()*mul ) + min; // * 50 ) +1 - 1~50
+                document.write("정답!! com : " + com + " user : " + user);
+                break; // while문 반복 종료 
+            }
+            else if( com < user) { // 내가 입력한 값보다 컴퓨터의 값이 작다면
+                document.write(` up! (com : ${com})<br>`);
+                min = com + 1; // 랜덤범위의 최소값 - 결과가 업이므로 컴퓨터값보다 +1이 최소값
+                mul = max-min+1; // 랜덤범위의 최대값 변화 없음 - 최소값이 변경되었으므로 * 값도  변경
+            
+            } else if (com > user) { // 내가 입력한 값보다 컴퓨터의 값이 크다면
+                document.write(`DOWN (com : ${com}<br>`);
+                max = com -1; // 랜덤범위의 최대값 - 다운이므로 최대값만 변경
+                mul = max - min +1; // 랜덤범위가 변경 되었으므로 * 의 값도 변경 
+            }
+        }
     </script>
 </head>
 <body>
-    
+
 </body>
 </html>
