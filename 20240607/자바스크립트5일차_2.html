@@ -39,6 +39,10 @@
             예) 비밀번호가 1234 라면 1234 + 4321
         */
 
+        let one;
+        let two;
+        let three;
+        let four;
 
         for(let i = 1; i<=9; i++){
 
@@ -46,6 +50,7 @@
 
             for( one = 3;  one <= 9; one++) {
                 
+                // console.log(one);
                 // console.log(one + " one의 값");
                 document.write("one의 값 : " + one + "<br>");
                 
@@ -53,13 +58,42 @@
             
             for( four = 1; four <=7; four++) {
 
-                console.log(one);
+                // console.log(four);
                 if(four !== one ) {
-                document.write("four의 값 : " + four + "<br>");
-                console.log("four의 값 : " + four + "<br>");
-                
+                // console.log(four !== one);
+                // console.log("four의 값 : " + four + "<br>");    
+                   document.write("four의 값 : " + four + "<br>");
                 }
             }
+
+            for( three = 2; three <= 9; three++) {
+
+                // console.log(three);
+                if(three !== one && three !== four) {
+                // console.log(three !== one && three !== four);
+                   document.write("three의 값 : " + three + "<br>");                    
+                }
+            }
+            
+            for( two = 1; two <= 9; two++) {
+                // console.log(two);
+                if(two < three && two !== one && two !== four) {
+                 // console.log(two < three && two !== one && two !== four);
+                    document.write("two의 값 : " + two + "<br>");
+                }
+            }
+
+            /*
+            one = 3 4 5 6 7 8 9
+
+            two = 1 2 3 4 5 6 7 9
+
+            three = 2 3 4 5 6 7 9
+
+            four = 1 2 3 4 5 7
+            */
+
+            
         }
 
     </script>
