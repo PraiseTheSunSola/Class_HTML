@@ -39,23 +39,27 @@
             예) 비밀번호가 1234 라면 1234 + 4321
         */
 
-            let one = 9;
-            let two;
-            let three;
-            let four = 7;
 
         for(let i = 1; i<=9; i++){
 
 
 
-            if(i > 1 && i +2 >= 9) {
-                // console.log(i);
+            for( one = 3;  one <= 9; one++) {
+                
+                // console.log(one + " one의 값");
+                document.write("one의 값 : " + one + "<br>");
+                
             } 
+            
+            for( four = 1; four <=7; four++) {
 
-            if(i !== four && i < one) {
-                console.log(i);
+                console.log(one);
+                if(four !== one ) {
+                document.write("four의 값 : " + four + "<br>");
+                console.log("four의 값 : " + four + "<br>");
+                
+                }
             }
-            i++;
         }
 
     </script>
