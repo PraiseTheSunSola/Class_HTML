@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과제</title>
+
+    <script>
+        /*  오늘의 과제 하나의 함수로만 이 위에 결과물을 만들수 있어야 하고 전역변수 사용 금지  */
+        function calculator (op) { //매개 변수가 힌트일 것 같은데
+            let n1 = Number(document.getElementById("num1").value);
+            let n2 = Number(document.getElementById("num2").value);
+            let 결과 = 0; 
+            switch( op ) {
+                case '+' : 결과 = n1 + n2;
+                    break; 
+                case '-' : 결과 = n1 - n2;
+                    break;
+                case '*' : 결과 = n1 * n2;
+                    break;
+                case '/' : 결과 = n1 / n2;
+                    break;       
+            }
+
+            document.querySelector("#result").innerHTML = 결과;
+        }
+    </script>
+</head>
+
+<body>
+    <!-- 인풋박스 -->
+    <div id="input_box">
+        <input type="text" id="num1">  
+        <input type="text" id="num2">
+    </div>
+    <br>
+    <!-- 버튼 -->
+    <button onclick="calculator('+')"> 더하기 </button>
+    <button onclick="calculator('-')"> 빼기 </button>
+    <button onclick="calculator('*')"> 곱하기 </button>
+    <button onclick="calculator('/')"> 나누기 </button>
+
+    <div id="result"></div>
+</body>
+</html>

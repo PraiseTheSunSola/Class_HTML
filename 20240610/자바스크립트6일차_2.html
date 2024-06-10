@@ -7,10 +7,56 @@
 
     <script>
 
+        function save() {
+            // input 태그에 입력한 내용을 ul#list에 목록으로 출력해라.
+            let save_text = document.getElementById("data").value;
+            // document.querySelector("#list").innerHTML= `<list> ${save_text} </list>`;
+            let list =  document.querySelector("#list"); // list 변수에 ul#list 태그 저장
+                                                         // ul 태그의 객체가 list 변수에 저장
+            list.innerHTML = list.innerHTML + "<li>" + save_text + "</li>";    
+            // 계속 생성 하려면 innerHTML을 같이 더해준다. 다만 정상적인 방법은 아니다. (편법)
+
+        }
+        // addEventListener - 이벤트 등록 시키는 함수
+        // addEventListener(이벤트명, )
+        window.onload = function() { //  window.onload = function() 을 적어줘야 아래 이벤트가 실행됨.
+        document.getElementById("td1").addEventListener('click', save);
+        }
+        // addEventListener 에서는 함수의 이름만 들어가지 매개변수는 들어가지 않는다. 고로 ()는 뺀다.
     </script>
-    
+
 </head>
+
 <body>
+
+    <h2> Praise The Sun!</h2>
+    <input type="text" id="data">
+
+    <button onclick="save()"> 저장 </button>
+
+    <ul id="list">
+
+    </ul>
+
+    <table id="board">
+        <tr>
+            <td id="td1"></td>
+            <td id="td2"></td>
+            <td id="td3"></td>
+        </tr>
+        <tr>
+            <td id="td4"></td>
+            <td id="td5"></td>
+            <td id="td6"></td>
+        </tr>
+    </table>
     
+    <style>
+        #board{ border-collapse: collapse;}
+        #board tr td{
+            border: 1px solid black;
+            width: 100px; height: 100px;
+        }
+    </style>
 </body>
 </html>
