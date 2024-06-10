@@ -59,16 +59,133 @@
         함수 자체적으로 데이터 입력이 없다면 외부로부터 데이터를 전달받아 사용해야한다.
         */
 
+  
 
+        /*
+        자바스크립트에서 html 태그를 제어 하려면 해당 태그를 선택해야한다.
+        html문서에서 특정 태그를 선택하는 방법은 태그명, id, class, name 이 있다.
+        태그명, class, name으로 선택하면 배열의 구조이다.
+        id로 선택하면 객체단위이고, 단일값이다. 변수 비슷하게 사용가능
+        현재 html문서에서 라는 뜻으로 document 
+        태그(엘리먼트)를 찾아서 가져오라는 뜻으로 getElement (id로 찾을때만 getElement을 사용한다!)
+        태그명, class, name, id 중 어떤거로 찾을거냐 
+        id - ById , class - ByClassName, 태그명 - ByTagName 
+        단, class , 태그명, name으로 선택할때에는 getElements이다.
+        */
+
+        // function calc() {
+        //     let num1 = Number(prompt("첫 번째 정수 "));
+        //     let num2 = Number(prompt("두 번째 정수 "));
+        //     print(num1, num2)
+            
+        //     /* #이나 .하지 않고 문자열로 이름만 입력한다!
+        //     <br>을 동작시키려면 .innerHTML을 사용해야한다!
+        //     */
+        // }
         
+        // function print(num1, num2) {
+            
+        //     let sum = num1 + num2; 
+        //     document.getElementById("result").innerHTML=`<br> ${sum} <br>`; 
+        // }
+
+        /* 
+        함수의 매개변수는 함수에 귀속되어 있는 지역변수다.
+        지역변수와 전역변수
+        젼역변수는 어느곳이나 사용가능한 변수 - { } 블록에 생성하지 않은 변수
+        전역변수의 선언은 자바스크립트 상단에 선언한다. 주로 let, const
+        */
+
+        /*
+        전연변수와 지역변수의 우선순위
+        지역변수가 우선순위인 경우 - 이름이 같다면
+        let count = 10; 전역변수
+        function increment(){
+            var count = 20;
+        }
+        function increment( count ) {
+
+        } 
+        */
+
+        // let num1 = 0;
+        // let num2 = 0;
+
+        // // 입력1 버튼을 클릭하여 정수 하나를 입력하고 div#result에 출력 하세요.
+        // function input1 (){
+        //     num1 = Number(prompt(" 정수를 입력하세요. "));
+        //     document.getElementById("result").innerHTML=`<br> ${num1}`;
+        // }
+
+        // function input2 (){
+        //     num2 = Number(prompt(" 정수를 입력하세요. "));
+        //     document.getElementById("result").innerHTML=`<br> ${num2}`;
+        // }
         
+        // function sum() {
+        //     합 = num1 + num2;
+        //     document.getElementById("result").innerHTML=` ${num1} + ${num2} = ${합}`;
+        // }
 
+        function getData( op ) {
+            let n1 = Number(document.getElementById("num1").value);
+            let n2 = Number(document.getElementById("num2").value);
+            let 결과 = 0; // 변수에 뭐가 들어올지 모른다면 null; 이라도 넣자. 
 
+            switch( op ) {
+                case '+' : 결과 = n1 + n2;
+                    break; 
+                case '-' : 결과 = n1 - n2;
+                    break;
+                case '*' : 결과 = n1 * n2;
+                    break;
+                case '/' : 결과 = n1 / n2;
+                    break;       
+            }
+            document.querySelector("#result").innerHTML = 결과;
+             // 이 녀석은 # 과 . 적어줘야함.
+            // document.querySelectorAll("div") 다수의 태그 선택시.
+        }
+
+        function plus() {
+           getData('+'); // 매개변수에 저장 되는 데이터는 인자라고 부른다.
+        }
+
+        function minus() {
+            getData('-');
+        }
+
+        function mul() {
+            getData('*');
+        }
+
+        function div () {
+            getData('/');
+        }
+
+        /*  오늘의 과제 하나의 함수로만 이 위에 결과물을 만들수 있어야 하고 전역변수 사용 금지  */
     </script>
 </head>
 <body>
-    
-    <button onclick=""> 계산 </button>
+    <!-- onclick= "함수이름()" html 태그의 이벤트에 의한 함수 호출 -->
+    <!-- <button onclick="calc()"> 계산 </button>  -->
+
+    <!-- <button onclick="input1()">입력1</button>
+    <button onclick="input2()">입력2</button>
+    <button onclick="sum()">더하기</button> -->
+
+    <div id="input_box">
+        <input type="text" id="num1">  
+        <!-- 모든 인풋 태그의 값은 value에 들어간다. 인풋 태그만 value를 가진다.-->
+        <input type="text" id="num2">
+    </div>
+    <br>
+    <button onclick="plus()"> 더하기 </button>
+    <!-- 문제 -->
+    <button onclick="minus()"> 빼기 </button>
+    <button onclick="mul()"> 곱하기 </button>
+    <button onclick="div()"> 나누기 </button>
+
     <div id="result"></div>
 </body>
 </html>
