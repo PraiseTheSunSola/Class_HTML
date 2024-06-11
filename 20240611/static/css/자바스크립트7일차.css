@@ -1,0 +1,58 @@
+*
+{
+    box-sizing: border-box;
+}
+#container
+{
+    
+    margin: 100px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 800px;
+    /* border: 2px solid black; */
+}
+
+.btn 
+{
+    width: 25%;
+    height: 250px;
+    font-size: 30px;
+    cursor: pointer;
+    
+}
+
+.btn:active
+{
+    border: 10px inset rgba(0, 0, 0, 5);
+}
+
+.btn1
+{
+    background-color: red;
+    color: whitesmoke;
+}
+
+.btn2
+{
+    background-color: rgba(255, 255, 0, 0.247);
+}
+.btn3
+{
+    background-color: rgba(0, 128, 0, 0.342);
+    color: whitesmoke;
+}
+.btn4
+{
+    background-color: rgba(0, 128, 0, 0.342);
+    color: whitesmoke;
+}
+.btn5
+{
+    background-color: rgba(255, 255, 0, 0.247);
+}
+.btn6
+{
+    background-color: white;
+}
