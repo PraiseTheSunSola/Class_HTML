@@ -22,6 +22,9 @@ $(function(){
         $("#result").fadeOut(1000);
     });
 
+    // var userInput = parseInt($("#play").val());
+    // var comInput = Math.floor(Math.random() * 3 ) +1;
+
     $(document).keyup(function(keyBoard){
         // alert(key.keyCode) 
         if(keyBoard.keyCode === 13){
@@ -31,15 +34,13 @@ $(function(){
 });
 
 function user(userInput){
-
     var userInput = parseInt($("#play").val());
     return userInput;
     
 }
 
 function com(comInput){
-
-    var comInput = Math.floor(Math.random() * 3 ) +1;
+    var comInput = Math.floor(Math.random() * 3 ) +1;    
     return comInput;
     
 }
