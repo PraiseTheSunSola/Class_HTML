@@ -18,7 +18,7 @@
 // 제이쿼리에서 window.onload=function(){ } 만드는 법.
 $(function(){
     // $("#box").html("태양만세"); // 태그로 작성한다면 $(div).html("태양만세");
-    $("#Open").on('click',function(){
+    $("#Open").on('click',function(){ // .on이 addEventListener를 대신
         // $("#box").show(); - 보이기.
         // $("#box").toggle(); - 보이기 감추기를 하나로
         // $("#box").fadeOut(); .fadeIn - 서서히 투명도 다운, 서서히 투명도 업
