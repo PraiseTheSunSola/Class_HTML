@@ -1,9 +1,9 @@
 /**
  * 지정된 개수(count)의 고유한 랜덤 숫자를 생성하는 함수
- * @param {number} count - 생성할 랜덤 숫자의 개수
- * @param {number} min - 랜덤 숫자의 최소값
- * @param {number} max - 랜덤 숫자의 최대값
- * @returns {number[]} - 고유한 랜덤 숫자로 이루어진 배열
+ * {number} count - 생성할 랜덤 숫자의 개수
+ * {number} min - 랜덤 숫자의 최소값
+ * {number} max - 랜덤 숫자의 최대값
+ * {number[]} - 고유한 랜덤 숫자로 이루어진 배열
  */
 function generateRandomNumbers(count, min, max) {
     const numbers = []; // 생성된 숫자를 저장할 배열
@@ -31,3 +31,19 @@ function displayRandomNumbers() {
         numbersContainer.appendChild(numberBox); // 컨테이너에 div 요소 추가
     }
 }
+
+// 잘 모르는 부분 혹은 이해가 잘 되지 않은 부분
+
+/*
+        numbersContainer.innerHTML = ''; // 이전 내용 제거
+
+        numberBox.className = 'number-box'; // 클래스 이름 설정
+        numberBox.textContent = numbers[i]; // div 요소에 랜덤 숫자 설정
+        numbersContainer.appendChild(numberBox); // 컨테이너에 div 요소 추가
+
+        .push
+
+        .includes
+
+*/
+
