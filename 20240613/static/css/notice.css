@@ -1,0 +1,32 @@
+/* notice */
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#title
+{
+    padding: 10px 0;
+    border-bottom: 1px solid #aaa; 
+}
+
+#content
+{
+    padding-top: 10px;
+}
+
+#list li
+{
+    cursor: pointer;
+}
+
+#more
+{
+    position: absolute;
+    top: 60px;
+    right: 50px;
+    cursor: pointer;
+}
