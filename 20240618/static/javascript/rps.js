@@ -119,4 +119,4 @@ function localSave(){
     let recordJSON = JSON.stringify( record);
     localStorage.setItem("record", recordJSON); // 앞쪽이 이름
     // localStorage.setItem("like", "banana"); // localStorage - 문자열 데이터 저장
-}
+}//
