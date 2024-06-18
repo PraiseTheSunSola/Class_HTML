@@ -47,53 +47,25 @@ $(document).keyup(function(event){
 
     var key = event.keyCode;
     // alert(typeof key); // case에 '87'로 할지 87로 할지 궁금하다면 데이터 타입을 알아보자.
-    switch(key){ // 범위 안에서 콕 집어서 정해져 있는 경우엔 switch문이 적절하다.
 
-        case 87:  
-        if (board[y-1][x] !== 1){
-            board[y][x] = 0;
-            $("td").eq(y*21+x).removeClass("me");
-            $("td").eq(y*21+x).addClass("blank");  // 현재 위치에 클래스명 blank로 변경 
-            y--;
-            board[y][x] = 2;
-            $("td").eq(y*21+x).removeClass("blank");
-            $("td").eq(y*21+x).addClass("me"); // 이동할 위치에 클래스명 me로 변경
-        }
-            break;
-        case 65:
-        if (board [y][x-1] !==1){
-            board[y][x] = 0;
-            $("td").eq(y*21+x).removeClass("me");
-            $("td").eq(y*21+x).addClass("blank");  // 현재 위치에 클래스명 blank로 변경 
-            x--;
-            board[y][x] = 2;
-            $("td").eq(y*21+x).removeClass("blank");
-            $("td").eq(y*21+x).addClass("me"); // 이동할 위치에 클래스명 me로 변경
-        }
-            break;
-        case 83:
-        if (board [y+1][x] !==1){
-            board[y][x] = 0;
-            $("td").eq(y*21+x).removeClass("me");
-            $("td").eq(y*21+x).addClass("blank");  // 현재 위치에 클래스명 blank로 변경 
-            y++;
-            board[y][x] = 2;
-            $("td").eq(y*21+x).removeClass("blank");
-            $("td").eq(y*21+x).addClass("me"); // 이동할 위치에 클래스명 me로 변경
-        }
-            break;
-        case 68:
-        if (board [y][x+1] !==1){
-            board[y][x] = 0;
-            $("td").eq(y*21+x).removeClass("me");
-            $("td").eq(y*21+x).addClass("blank");  // 현재 위치에 클래스명 blank로 변경 
-            x++;
-            board[y][x] = 2;
-            $("td").eq(y*21+x).removeClass("blank");
-            $("td").eq(y*21+x).addClass("me"); // 이동할 위치에 클래스명 me로 변경
-        }
-            break;
+    var stepx = x , stepy = y; //이동할 위치 표현 변수 (중간에 콤마를 넣으면 다수으 변수 선언 가능.)
+    board[y][x] = 0;
+    $("td").eq(y*21+x).removeClass("me");
+    $("td").eq(y*21+x).addClass("blank");  // 현재 위치에 클래스명 blank로 변경 
+
+    switch(key){ // 범위 안에서 콕 집어서 정해져 있는 경우엔 switch문이 적절하다.
+        
+        case 87:   stepy--; break;
+        case 65:   stepx--; break;
+        case 83:   stepy++; break;
+        case 68:   stepx++; break;
     } 
+    if (board[stepy][stepx] != 1) {
+        x = stepx;
+        y = stepy;
+    }
+            $("td").eq(y*21+x).removeClass("blank");
+            $("td").eq(y*21+x).addClass("me"); // 이동할 위치에 클래스명 me로 변경
 });
 
 /* 과제 
