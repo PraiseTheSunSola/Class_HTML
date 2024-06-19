@@ -9,7 +9,63 @@
     <script>
 
         let student = { name: "이순신", age: 19, tall:172 };
-        document.write(student.name);
+        // document.write(student.name);
+
+        /* JSON.stringify => 자바스크립트 객체를 문자열로 변환
+        JSON.parse => 문자열을 자바스크립트 객체로 변환
+        */
+
+        let str = JSON.stringify( student );
+        // document.write("<br>" + str );
+
+        let std = JSON.parse(str);
+        // document.write("<br>" + std.age);
+
+/* document.write("<br>" + str ); 나 document.write("<br>" + std.age);
+가 출력 되지 않는 이유는 xml이 비동기이기 때문에 평소의 출력대로 되지 않는 것.
+시간차에 의한 동기화가 다르기 때문.
+*/
+
+
+        const xml = new XMLHttpRequest();
+        // (, "") , 앞에는 방식을 입력하고 ""는 경로를 입력
+        xml.onload = function(){
+            // var std = JSON.parse(this.responseText);
+            var sigu = JSON.parse(this.responseText);
+            // view();
+            view2(sigu);
+            // document.write( std.name);
+            // document.write( std.age);
+            // document.write( this.responseText); // 현재 this는 xml을 뜻함.
+        }
+        // xml.open( "GET" , "student.json" ); // 받기
+        // xml.send() // 보내기
+
+        xml.open( "GET" , "sigu.json" ); // 받기
+        xml.send() // 보내기
+        // function view(std){
+
+        //     for( var i=0; i<std.length; i++){
+        //         // if(std[i].age == 19){
+        //         // document.write( std[i].name + " " + std[i].age + " " + std[i].tall + "<br>" );
+        //         // }
+        //         if(std[i].name.indexOf("온" == 0)){ // 문자열도 배열이기 때문에 indexOf 사용 가능
+        //         document.write( std[i].name + " " + std[i].age + " " + std[i].tall + "<br>" );
+        //         }
+        //     }
+        // }
+
+        // 대전 광역시 중구의 광역시 코드와 시군구 코드를 출력하세요.
+        function view2(sigu){
+            for( var i=0; i<sigu.length; i++){
+                if(sigu[i].법정동명.indexOf("대전") != -1){
+                    if(sigu[i].법정동명.indexOf("중구") != -1){
+                        document.write(sigu[i].광역시도코드);
+                        document.write(sigu[i].광역시도코드);
+                    }
+                }
+            }
+        }
     </script>
 </head>
 <body>
