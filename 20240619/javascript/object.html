@@ -5,10 +5,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>객체</title>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <script src="../static/javascript/object.js"></script>
+    <!-- <script src="../static/javascript/object.js"></script> -->
     <link rel="stylesheet" href="/./20240619/static/css/object.css">
+
 </head>
 <body>
     
+    <div id="box" class="area" onmouseover="javascript: alert('마우스왔다');">
+        나는 dive이다.
+    </div>
 </body>
 </html>
+
+<script>
+let d = document.getElementById("box");
+console.log(d);
+
+// document.write(d.innerHTML); 
+// 객체에서 .은 접근연산자이다.
+//객체 내부의 변수 또는 함수에 접근한다.
+
+// document.write(d.id);
+// document.write(d.className);
+// document.write(d.localName);
+d.className = "box1";
+d.hidden = true;
+
+let div = document.querySelector("#box");
+console.log(div);
+
+let box = $("#box");
+console.log(box);
+
+window.onload = function(){
+
+}
+// let key = value;
+let num = 10;
+let arr = [10,20,30];
+// 사용자 객체 생성 (개발자가 직접 만든 객체)
+
+/*변수로 만들어도 되지만 객체로 만들어 쓰는 이유.
+하나로 가능해지고, 각각의 데이터에 부연 설명이 가능함. 뭘 의미하는지 
+*/
+
+// 1. 개발자가 직접 key와 value를 입력해서 만든 객체
+let 학생1 = {name : "리슌싱", age: 31 , addr: "노량"}; // 객체를 만들 때는 중괄호를 사용한다.
+let 학생2 = {name : "깅류싱", age: 32 , addr: "말머리"};
+let std1 = 학생1;
+
+console.log(학생1.name);
+console.log(학생2.name);
+
+
+// 2. 생성자함수를 통한 객체 생성
+function book (t, a, y) {
+    //this는 앞으로 만들어질 객체를 의미
+    this.title = t;
+    this.author = a;
+    this.year = y;
+}
+
+    book1 = new book("자바","홍길동",2024); // 생성자함수를 통해 객체 생성 방법 new 연산자로 새로운 객체 생성.
+    // book () - 생성자함수 호출
+    book2 = new book("html", "깅류싱",2019);
+    
+    // document.write(book1);
+    console.log(book2.year);
+
+    //영화 - 영화제목, 감독, 장르에 대해 저장할 수 있는 생성자함수와 객체 2개를 만드세요.
+
+    function movie(t, d, y) {
+        this.title = t;
+        this.director = d;
+        this.year = y;
+    }
+
+    // let movieList = new Array();
+    let movieList = []; // movie 객체를 저장할 배열
+
+    // movie1 = new movie("겨울왕국1","크리스벅 & 제니퍼 리",2013);
+
+    movieList.push( new movie("저수지의개들","쿠엔틴 타란티노",1992));
+    movieList.push( new movie("범죄도시4","허명행",2024));
+    movieList.push( new movie("겨울의 왕국1","제니퍼 리",2013));
+    movieList.push( new movie("인사이드 아웃1","피트 닥터",1992));
+    movieList.push( new movie("대부","프랜시스 포드 코폴라",1972));
+
+    document.write( movieList[3].title+ "<br>" );
+    
+    for( var i=0; i<movieList.length; i++){
+        document.write("<br>" + movieList[i].title + "<br>");
+        document.write(movieList[i].director + " " + movieList[i].year + "<br>");
+    }
+    // 객체는 인덱스가 존재하지 않는다.
+
+    /* 배열의 인덱스
+        배열과 같은 구조를 가져야 한다.
+        모든 공간이 연속적이며, 같은 크기의 공간이어야 한다.
+    */
+
+   document.write(movieList[0])
+</script>
