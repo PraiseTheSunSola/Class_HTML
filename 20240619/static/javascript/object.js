@@ -27,24 +27,3 @@ ex) 모니터 객체
     html 태그는 자바스크립트에서 객체이다.
 */
 
-// window.onload = function(){
-
-//     let d = document.getElementById("box");
-//     console.log(d);
-
-//     document.write(d.innerHTML); 
-//     // 객체에서 .은 접근연산자이다.
-//     //객체 내부의 변수 또는 함수에 접근한다.
-
-//     document.write(d.id);
-//     document.write(d.className);
-//     document.write(d.localName);
-//     d.className = "box1";
-//     d.hidden = true;
-    
-//     let div = document.querySelector("#box");
-//     console.log(div);
-
-//     let box = $("#box");
-//     console.log(box);
-// }
