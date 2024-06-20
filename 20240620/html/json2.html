@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이슨</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <script>
+        /*
+        폭염.json 파일의 내용 자바스크립트로 가져와서 
+        브라우저 화면에 출력하기.
+        이쁘고 깔끔하고 심플하게 태양만세.
+        */
+
+        window.onload = function(){
+
+            const xml = new XMLHttpRequest();
+
+            xml.onload = function()
+            {
+                var sun = this.responseText;
+                sun = JSON.parse(sun);
+                print(sun)
+
+            }
+
+            xml.open('GET','폭염.json'); 
+            xml.send();
+
+            // $("#temp").on('keyup', explore); //input
+            // $("#temp").on('change',explore); //input 태그의 업 다운 버튼 클릭하여 변경시
+            // $("#location").on('change',explore); // select 태그의 값 선택 시
+
+            $("#more").on('click', explore ); // 이상 버튼 클릭 시 
+            $("#less").on('click', explore ); // 이하 버튼 클릭 시
+        }
+
+        function print(sun)
+        {
+            for( let i=0; i<sun.length; i++)
+            {
+                $("#info_List").append
+                (`
+             <tr>
+                <th> ${sun[i].연도별}</th>
+                <th> ${sun[i]['서울(일)']}</th>
+                <th> ${sun[i]['강릉(일)']}</th>
+                <th> ${sun[i]['대전(일)']}</th>
+                <th> ${sun[i]['대구(일)']}</th>
+                <th> ${sun[i]['광주(일)']}</th>
+                <th> ${sun[i]['부산(일)']}</th>
+                <th> ${sun[i]['전국일평균(일)']}</th>
+             </tr>
+                `);
+            }
+        }
+
+        function moreFunc (a, b) { // 이상 버튼 클릭하면 동작할 함수 >=
+            return a>=b;
+        }
+
+        function lessFunc (a, b) { // 이하 버튼 클릭하면 동작할 함수 <=
+            return a<=b;
+        }
+
+
+        function explore() {
+
+            var func = moreFunc; // 함수의 이름을 변수에 저장하여 함수호출 가능 (참조 변수)
+            if($(this).text() === "이하" ) func = lessFunc; 
+            // 함수의 이름은 메모리 주소이고 함수호출은 메모리 주소를 통해 실행시키기 때문에 변수에 담아서 호출하는게 가능
+
+            var inputValue = $("#temp").val();
+            var loc = $("#location").val();
+
+            if(inputValue != 0) // 이상 이하 버튼 이벤트 관련 식
+            {
+                let tr = $("#info_List tr");
+                loc = Number(loc); // 서울 선택시 loc에는 2 저장, 대전 선택시 loc에는 4 저장
+                for( var i=loc-1; i< tr.length; i = i + 8)
+                {
+                    if(func(Number( tr.eq(i).text()) != Number(inputValue) ))
+                    {
+                        for(var k = i-(loc-1); k <= i+8-loc; k++)
+                        {// 선택한 지역이 조건에 맞지 않으면 해당 줄 전체 li태그 감추기.
+                            tr.eq(k).toggle(true);
+                        }
+                        
+                    }
+                    else{
+                        for(var k = i-(loc-1); k <= i+8-loc; k++)
+                        {// 선택한 지역이 조건에 맞지 않으면 해당 줄 전체 li태그 감추기.
+                            tr.eq(k).toggle(false);
+                        }
+                    }
+                }
+            }
+
+
+            // if(inputValue != 0)  // input 관련 이벤트 식
+            // {
+            //     let tr = $("#info_List tr");
+            //     loc = Number(loc); // 서울 선택시 loc에는 2 저장, 대전 선택시 loc에는 4 저장
+            //     for( var i=loc-1; i< tr.length; i = i + 8)
+            //     {
+            //         if(Number( tr.eq(i).text()) != Number(inputValue) )
+            //         {
+            //             for(var k = i-(loc-1); k <= i+8-loc; k++)
+            //             {// 선택한 지역이 조건에 맞지 않으면 해당 줄 전체 li태그 감추기.
+            //                 tr.eq(k).toggle(false);
+            //             }
+                        
+            //         }
+            //         else{
+            //             for(var k = i-(loc-1); k <= i+8-loc; k++)
+            //             {// 선택한 지역이 조건에 맞지 않으면 해당 줄 전체 li태그 감추기.
+            //                 tr.eq(k).toggle(true);
+            //             }
+            //         }
+            //     }
+            // }
+
+            // $("#info_List tr").filter(function(){
+            //     $(this).toggle($(this).text().indexOf(inputValue) != -1 );
+            // });
+        }
+
+
+        // 5라는게 하나라도 있는 줄은 나오게 하기
+    </script>
+</head>
+<body>
+    <div id="filter">
+        <select id="location">
+            <option value="1">전국</option>
+            <option value="2">서울</option>
+            <option value="3">강릉</option>
+            <option value="4">대전</option>
+            <option value="5">대구</option>
+            <option value="6">광주</option>
+            <option value="7">부산</option>
+        </select>
+        <input id="temp"  type="number"  value="0">일
+        <button id="more">이상</button>
+        <button id="less">이하</button>
+    </div>
+    <div id="wrap">
+        <!-- <div class="inputBox"><input type="text" id="search" placeholder="검색어를 입력하세요."></div> -->
+    </div>
+    <div id="dataList">
+        
+        <table id="dataTable">
+            <thead class="dataHead">
+                <tr>
+                    <th class="연도별">연도별</th>
+                    <th class="서울">서울</th>
+                    <th class="강릉">강릉</th>
+                    <th class="대전">대전</th>
+                    <th class="대구">대구</th>
+                    <th class="광주">광주</th>
+                    <th class="부산">부산</th>
+                    <th class="전국일평균">전국일평균</th>
+                </tr>
+            </thead>
+            <tbody id="info_List"></tbody>
+        </table>
+    </div>
+    <style>
+
+        body
+        {
+            background-image: url(../static/image/sun.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #temp
+        {
+            width: 40px;
+            padding-left: 10px;
+        }
+        #wrap
+        {
+            width: 1000px;
+            margin: 50px auto;
+        }
+        .inputBox{
+            padding: 10px 0;
+        }
+        #search{
+            width: 300px;
+            font-size: 25px;
+            padding: 10px;
+            border: 2px solid #aaa;
+            border-radius: 10px;
+        }
+        #dataList{ 
+            padding: 15px 0; 
+            border-top: 1px solid #aaa;
+        }
+        #dataTable
+        {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead
+        {
+            
+            margin-bottom: 20px;
+        }
+        .연도별{ width: 12.5%;}
+        .서울{ width: 12.5%;}
+        .강릉{ width: 12.5%;}
+        .대전{ width: 12.5%;}
+        .대구{ width: 12.5%;}
+        .광주{ width: 12.5%;}
+        .부산{ width: 12.5%;}
+        .전국일평균{ width: 12.5%;}
+
+        #info_List tr
+        {
+            border: 3px solid black;
+            height: 40px;
+        }
+        #info_List th 
+        {
+            line-height: 40px;
+            font-size: 18px;
+            text-align: center;
+        }
+    </style>  
+</body>
+</html>
