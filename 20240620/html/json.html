@@ -51,20 +51,50 @@
         window.onload = function(){
 
             const xml = new XMLHttpRequest();
-        xml.onload = function(){ // json 파일 모두 열기 되면 실행
-            var data = this.responseText; //  json파일의 내용을 가져와서 data에 저장, 문자열로 저장되어 있다.
-            data = JSON.parse(data); // json을 자바스크립트 객체로 변환하여 data에 저장
-            console.log(data.종량제봉투판매소정보);
-            output(data.종량제봉투판매소정보);
+
+            xml.onload = function()
+            { // json 파일 모두 열기 되면 실행
+
+                var data = this.responseText; //  json파일의 내용을 가져와서 data에 저장, 문자열로 저장되어 있다.
+                data = JSON.parse(data); // json을 자바스크립트 객체로 변환하여 data에 저장
+                console.log(data.종량제봉투판매소정보);
+                output(data.종량제봉투판매소정보);
             
-        }
-        xml.open('GET', '종량제봉투.json'); // 받기
-        xml.send(); // 보내기
-        }
+            }
+            xml.open('GET', '종량제봉투.json'); // 받기
+            xml.send(); // 보내기
+
+            $("#search").on('keyup', search);
+            
+        }//
 
 
         function output(data){
+            // data 매개변수는 배열이다. 배열 안에 객체들이 있다.
+            for( var i=0; i< data.length; i++){
+                // if( data[i].동선택 === "부강면"){}  // 부강면만 나오게 하고 싶다면.
 
+                
+                $("#dataField").append(`
+                <tr>
+                    <td>${ data[i].동선택}</td>
+                    <td>${ data[i].지정판매소명}</td>
+                    <td>${ data[i]['도로명 주소']}</td> 
+                    <td>${ data[i]['판매소 전화번호']}</td> 
+                </tr>
+                `);
+                //   판매소 전화번호와 같이 중간에 띄어쓰기가 있는 경우엔 [](대괄호)와 ''을 사용한다. 
+            }
+        }
+
+        function search (){
+            var value = $(this).val(); // input 태그 입력 값 가져오기.
+            console.log(search);
+            $("#dataField tr").filter(function(){
+                $(this).toggle($(this).text().indexOf(value) != -1); // 여기서 this는 tr을 뜻함.
+
+            });
+            //.toggle(false) - hide() 동작 , .toggle( true ) - show() 동작
         }
     </script>
 </head>
@@ -86,5 +116,41 @@
         </table>
 
     </div>
+<style>
+    #wrap
+    {
+        width: 1000px;
+        margin: 50px auto;
+    }
+    .inputBox{
+        padding: 10px 0;
+    }
+    #search{
+        width: 300px;
+        font-size: 25px;
+        padding: 10px;
+        border: 2px solid #aaa;
+        border-radius: 10px;
+    }
+    #dataList{ 
+        padding: 15px 0; 
+        border-top: 1px solid #aaa;
+    }
+    #dataTable
+    {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    .동{ width: 15%;}
+    .판매소명 { width: 35%;}
+    .주소{width: 30%;}
+    .전화번호{width: 20%;}
+
+    #dataField td {
+        line-height: 40px;
+        font-size: 18px;
+        text-align: center;
+    }
+</style>    
 </body>
 </html>
