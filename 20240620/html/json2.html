@@ -76,23 +76,25 @@
 
             if(inputValue != 0) // 이상 이하 버튼 이벤트 관련 식
             {
-                let tr = $("#info_List tr");
+                let th = $("#info_List th");
                 loc = Number(loc); // 서울 선택시 loc에는 2 저장, 대전 선택시 loc에는 4 저장
-                for( var i=loc-1; i< tr.length; i = i + 8)
+                for( var i=loc-1; i< th.length; i = i + 8)
                 {
-                    if(func(Number( tr.eq(i).text()) != Number(inputValue) ))
+                    if(func(Number( th.eq(i).text()) , Number(inputValue) ))
                     {
-                        for(var k = i-(loc-1); k <= i+8-loc; k++)
-                        {// 선택한 지역이 조건에 맞지 않으면 해당 줄 전체 li태그 감추기.
-                            tr.eq(k).toggle(true);
-                        }
+                        th.eq(i).parent().toggle(true);
+                        // for(var k = i-(loc-1); k <= i+8-loc; k++)
+                        // {// 선택한 지역이 조건에 맞지 않으면 해당 줄 전체 li태그 감추기.
+                        //     th.eq(k).toggle(true);
+                        // }
                         
                     }
                     else{
-                        for(var k = i-(loc-1); k <= i+8-loc; k++)
-                        {// 선택한 지역이 조건에 맞지 않으면 해당 줄 전체 li태그 감추기.
-                            tr.eq(k).toggle(false);
-                        }
+                        th.eq(i).parent().toggle(false);
+                        // for(var k = i-(loc-1); k <= i+8-loc; k++)
+                        // {// 선택한 지역이 조건에 맞지 않으면 해당 줄 전체 li태그 감추기.
+                        //     th.eq(k).toggle(false);
+                        // }
                     }
                 }
             }
