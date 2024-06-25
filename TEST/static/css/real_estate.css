@@ -1,0 +1,65 @@
+*
+{
+    padding: 0 auto;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background: #FFFFFF;
+}
+#wrap
+{
+    width: 1000px;
+    margin: 50px auto;
+}
+
+h1
+{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #FF681B;
+}
+
+#search_box
+{
+    margin-bottom: 20px;
+    text-align: center;
+}
+.inputBox
+{
+    display: inline-block;
+}
+
+#buildin_list
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+a
+{
+    text-decoration: none;
+    color: black;
+}
+
+.building> div
+{
+    text-align: center;
+}
+
+img
+{
+    width: 200px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+span
+{
+    display: inline-block;
+}

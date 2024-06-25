@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실기평가</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script src="../static/javascript/real_estate.js"></script>
+<link rel="stylesheet" href="../static/css/real_estate.css">
+</head>
+<body>
+    <div id="wrap">
+        <h1>태양만세 부동산</h1>
+        <div id="search_box">
+            
+            <select id="trading">
+                <option value="0">거래방식</option>
+                <option value="1">전체</option>
+                <option value="2">매매</option>
+                <option value="3">전세</option>
+                <option value="4">월세</option>
+                <option value="5">단기임대</option>
+            </select>
+            <select id="price">
+                <option value="0">가격대</option>
+                <option value="1">5천</option>
+                <option value="2">6천</option>
+                <option value="3">7천</option>
+                <option value="4">8천</option>
+                <option value="5">9천</option>
+                <option value="6">1억</option>
+                <option value="7">2억</option>
+                <option value="8">3억</option>
+                <option value="9">4억</option>
+                <option value="10">5억</option>
+                <option value="11">6억</option>
+                <option value="12">7억</option>
+                <option value="13">8억</option>
+            </select>
+            <select id="area">
+                <option value="0">면적</option>
+                <option value="1">~10평</option>
+                <option value="2">10평대</option>
+                <option value="3">20평대</option>
+                <option value="4">30평대</option>
+                <option value="5">40평대</option>
+                <option value="6">50평대</option>
+                <option value="7">60평대</option>
+                <option value="8">70평~</option>
+            </select>
+            <select id="room">
+                <option value="0">방</option>
+                <option value="1">전체</option>
+                <option value="2">1개</option>
+                <option value="3">2개</option>
+                <option value="4">3개</option>
+                <option value="5">4개이상</option>
+            </select>
+            <select id="bathroom">
+                <option value="0">욕실</option>
+                <option value="1">전체</option>
+                <option value="2">1개</option>
+                <option value="3">2개</option>
+                <option value="4">3개</option>
+                <option value="5">4개이상</option>
+            </select>
+            <div class="inputBox"><input type="text" id="search" placeholder="검색어를 입력하세요."></div>
+        </div>
+
+        <div id="building_box">
+            <div id="buildin_list">
+                <a href="#building1" class="building">
+                    <img src="../static/image/bd1.jpg" alt="장대시티빌">
+                    <div>장대시티빌</div>
+                    <div>1.2억</div>
+                </a>
+                <a href="#building2" class="building">
+                    <img src="../static/image/bd2.png" alt="벨포스토V">
+                    <div>벨포스토V</div>
+                    <div>전세 1.2억</div>
+                </a>
+                <a href="#building3" class="building">
+                    <img src="../static/image/bd3.jpg" alt="래자미">
+                    <div>래자미</div>
+                    <div>월세 500/40</div>
+                </a>
+                <a href="#building4" class="building">
+                    <img src="../static/image/bd4.jpg" alt="드림월드">
+                    <div>드림월드</div>
+                    <div>전세 2.8억</div>
+                </a>
+                <a href="#building5" class="building">
+                    <img src="../static/image/bd5.jpg" alt="갤러리빌">
+                    <div>갤러리빌||</div>
+                    <div>매매 3억</div>
+                </a>
+                <a href="#building6" class="building">
+                    <img src="../static/image/bd6.jpg" alt="리베라아이누리">
+                    <div>리베라아이누리</div>
+                    <div>매매 7천</div>
+                </a>
+                <a href="#building7" class="building">
+                    <img src="../static/image/bd7.jpg" alt="우성햇살">
+                    <div>우성햇살</div>
+                    <div>전세 2.7억</div>
+                </a>
+                <a href="#building8" class="building">
+                    <img src="../static/image/bd8.jpg" alt="베르디움">
+                    <div>베르디움</div>
+                    <div>전세 4.5억</div>
+                </a>
+                <a href="#building9" class="building">
+                    <img src="../static/image/bd9.jpg" alt="한솔타운">
+                    <div>한솔타운</div>
+                    <div>월세 1000/40</div>
+                </a>
+                <a href="#building10" class="building">
+                    <img src="../static/image/bd10.jpg" alt="더그린">
+                    <div>더그린</div>
+                    <div>매매 9천</div>
+                </a>
+                <a href="#building11" class="building">
+                    <img src="../static/image/bd11.jpg" alt="레자미리버뷰시티">
+                    <div>레자미리버뷰시티</div>
+                    <div>월세 500/49</div>
+                </a>
+                <a href="#building12" class="building">
+                    <img src="../static/image/bd12.png" alt="신영미소랑">
+                    <div>신영미소랑</div>
+                    <div>월세 300/37</div>
+                </a>
+                <a href="#building13" class="building">
+                    <img src="../static/image/bd13.jpg" alt="위드리버">
+                    <div>위드리버</div>
+                    <div>1000/60</div>
+                </a>
+                <a href="#building14" class="building">
+                    <img src="../static/image/bd14.jpg" alt="노블레스2">
+                    <div>노블레스2</div>
+                    <div>매매 1억 8천</div>
+                </a>
+                <a href="#building15" class="building">
+                    <img src="../static/image/bd15.png" alt="에이스타운">
+                    <div>에이스타운 ||</div>
+                    <div>전세 1억 5천</div>
+                </a>
+                <a href="#building16" class="building">
+                    <img src="../static/image/bd16.jpg" alt="엔터팰리스2차">
+                    <div>엔터팰리스2차</div>
+                    <div>매매 1억</div>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
