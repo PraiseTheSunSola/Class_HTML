@@ -191,13 +191,27 @@ $(document).ready(function() {
         }
 
         let newHead = { x: snakeX, y: snakeY };
+        /* snakeX와 snakeY는 현재 지렁이 머리 위치를 기준으로 이동한 새로운 위치
+        이 위치를 { x: snakeX, y: snakeY } 객체로 생성하여 newHead 변수에 저장
+        이 객체는 지렁이의 움직일때마다 기준이 되는 새로운 머리 위치
+        */
         
         if (collision(newHead, snake) || collision(newHead, obstacles)) {
             gameOver();
             return;
         }
+        /* 지렁이의 새로운 머리와 몸이 충돌하는지 혹은 장애물과 충돌하는지
+        둘 중 하나라도 발생하면 함수 gameOver()를 호출해서 게임 오버가 된다.
 
+        */
         snake.unshift(newHead);
+        /*
+        unshift는 JavaScript 배열 메소드 중 하나로, 
+        배열의 시작 부분에 하나 이상의 요소를 추가하고,새로운 배열의 길이를 반환
+        이 코드로 지렁이가 움직일때마다 newHead를 배열의 맨 앞에 추가해주고 
+        snake.pop()으로 꼬리를 제거해주니 지렁이가 움직이고 이동하는 것처럼 
+        보이는 효과를 준다.
+        */
     }
 
     // 장애물 생성 함수
