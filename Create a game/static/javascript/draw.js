@@ -109,14 +109,19 @@ $(document).ready(function() {
 
     // 그리기 함수
     function draw() {
-        if (!gameStarted) return;
-
+        if (!gameStarted) return; // 게임이 실행되지 않으면 동작하지 않겠다는 코드
+        
         $gameBoard.find("td").removeClass("snake apple obstacle");
-
+        /* ↑ id gameBoard인 table 태그 안에 td에서 snake, apple, obstacle 이 세 개를 찾아서 지워서
+            화면을 초기화 해주는 코드
+        */
         for (let i = 0; i < snake.length; i++) {
             let $cell = $gameBoard.find("tr").eq(snake[i].y).find("td").eq(snake[i].x);
             $cell.addClass("snake");
         }
+        /*
+        반복문을 통해 
+        */
 
         $gameBoard.find("tr").eq(apple.y).find("td").eq(apple.x).addClass("apple");
 
